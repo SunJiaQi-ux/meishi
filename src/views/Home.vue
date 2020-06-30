@@ -11,7 +11,12 @@
     </div>
     <div class="home_body">
       <div class="home_body_header">
-        <div class="home_body_header_item" v-for="(item,index) in bodyHeaderItem" :key="index">
+        <div
+          class="home_body_header_item"
+          v-for="(item,index) in bodyHeaderItem"
+          :key="index"
+          v-on:click="onClick(index)"
+        >
           <div class="home_body_header_div">
             <div class="home_body_header_img">
               <img :src="item.body_image" />
@@ -54,7 +59,16 @@ export default {
       teacherItem: []
     };
   },
-  methods: {},
+  methods: {
+    onClick: function(index) {
+      if (index === 1) {
+        this.$router.push("/tutorship");
+      }
+      if (index === 2) {
+        this.$router.push("/study");
+      }
+    }
+  },
   mounted() {
     axios.get("http://localhost:8080/home.json").then(response => {
       this.swiperItem = response.data.swiper;
