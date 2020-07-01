@@ -47,6 +47,30 @@ const routes = [
     meta:{
       footer:false
     }
+  },
+  {
+    path: '/person',
+    name: 'Person',
+    component: () => import('../views/Person.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/mym/Login.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/mym/Register.vue'),
+    meta:{
+      footer:false
+    }
   }
 ]
 
