@@ -61,6 +61,9 @@ export default {
   },
   methods: {
     onClick: function(index) {
+      if (index===0) {
+        this.$router.push("/course")
+      }
       if (index === 1) {
         this.$router.push("/tutorship");
       }

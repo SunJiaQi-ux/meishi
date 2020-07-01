@@ -2,9 +2,9 @@
   <div class="nkl_box">
     <!-- 头部 -->
     <div class="nkl_header">
-        <van-nav-bar title="特色课" size="36">
+        <van-nav-bar title="特色课">
             <template #right>
-                <van-icon name="search" size="40" color="#808080"/>
+              <router-link to="/seacher"><van-icon name="search" size="0.45rem" color="#7e7e7e"/></router-link>  
             </template>
         </van-nav-bar>
         <!-- 分类 -->
@@ -34,6 +34,7 @@
             </van-dropdown-item>
         </van-dropdown-menu>
     </div>
+    <!-- 列表 -->
     <div class="nkl_content">
         <div class="nkl_list" v-for="(item,index) in list" :key="index">
           <p>{{item.title}}</p>
@@ -42,7 +43,7 @@
           <div><span>{{item.sales_num}}人已报名</span><span>免费</span></div>
         </div>
     </div>
-    <!-- <van-loading size="24px" v-show="loading" color="#0088dd">加载中...</van-loading> -->
+    <div class="nkl_center"><van-loading size="24px" v-show="loading" color="#0088dd">加载中...</van-loading></div>
   </div>
 </template>
 
@@ -52,9 +53,6 @@ export default {
   name: "",
   data() {
     return {
-        value1: 0,
-        value2: 'a',
-        value3:'A',
         option1: {
           nianji:["初一","初二","初三","高一","高二"],
           xueke:["语文","数学","英语","物理","化学"]
@@ -63,46 +61,26 @@ export default {
         option3: ["全部","大班课","小班课","公开课","点播课","面授课","音频课","系统课","图文课","会员课"],
         page:1,
         list:[],
-        teacher_avatar:"",
-        teacher_name:"",
+        loading:false,
     };
   },
   props: {},
   components: {},
   mounted() {
     this.courseList()
-    // window.addEventListener("scorll",()=>{
-    //     let html = document.documentElement || document.body;
-    //         //loading效果
-    //     if(html.scrollHeight <= html.scrollTop+html.clientHeight+2){
-    //         // this.loading = true;
-    //         setTimeout(()=>{
-    //         // this.loading = false;
-    //         this.courseList();
-    //         },2000);
-    //     }
-    // })
   },
   methods: {
     //获取特色课列表数据 
     courseList(){
         this.$axios(`https://www.365msmk.com/api/app/courseBasis?page=${this.page}&limit=10`).then((res)=>{
-        //   console.log(res.data.data)
-          console.log(res.data.data.list)
+          console.log(res.data.data)
           this.list=res.data.data.list
-        //   if(res.data.code == 0){
-        //     this.goodsList.push(...res.data.data);
-        //     // console.log(this.goodsList)
-        //     this.currentPage++;
-        //     }else{
-        //     this.loading = false;
-        //     }
     })
     }
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .nkl_box{
   font-size: 0.16rem;
 }
@@ -111,19 +89,6 @@ export default {
   width: 7.4rem;
   height: 1.73rem;
   z-index: 100;
-  .van-nav-bar{
-    width: 7.4rem;
-    height: 0.93rem; 
-  }
-  .van-dropdown-menu__bar{
-    height: 0.8rem;
-  }
-  .van-dropdown-menu__title{
-    color:#212122;
-  }
-  .van-ellipsis{
-    font-size: 0.28rem;
-  }
   // 分类1
   .nkl_option1{
     height: 6.66rem;
@@ -220,7 +185,7 @@ export default {
   .nkl_list{
     margin: 0 auto;
     width: 6.86rem;
-    height: 3.38rem;
+    min-height: 3.38rem;
     padding: 0.3rem 0.3rem 0.26rem 0.47rem;
     box-sizing: border-box;
     background: #ffffff;
@@ -264,5 +229,13 @@ export default {
       }
     }
   }
+}
+.nkl_center{
+  position: fixed;
+  top: 45%;
+  left: 45%;
+  z-index: 3300;
+  width: 50px;
+  height: 50px;
 }
 </style>

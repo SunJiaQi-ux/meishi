@@ -25,10 +25,17 @@ const routes = [
   {
     path: '/course',
     name: 'course',
-    component: () => import('../views/Course/course.vue'),
-    // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    component: () => import('../views/nkl/course.vue'),
     meta:{
       footer:true
+    }
+  },
+  {
+    path: '/oto',
+    name: 'course',
+    component: () => import('../views/nkl/oto.vue'),
+    meta:{
+      footer:false
     }
   },
   {
