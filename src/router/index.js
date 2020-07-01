@@ -5,11 +5,14 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta:{
+      footer:true
+    }
   },
   {
     path: '/about',
@@ -22,7 +25,35 @@ Vue.use(VueRouter)
   {
     path: '/course',
     name: 'course',
-    component: () => import('../views/Course/course.vue')
+    component: () => import('../views/Course/course.vue'),
+    // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    meta:{
+      footer:true
+    }
+  },
+  {
+    path: '/study',
+    name: 'Study',
+    component: () => import('../views/Study.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/tutorship',
+    name: "Tutorship",
+    component: () => import('../views/Ttorship.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/seacher',
+    name: 'Seacher',
+    component: () => import('../views/Seacher.vue'),
+    meta:{
+      footer:false
+    }
   }
 ]
 
