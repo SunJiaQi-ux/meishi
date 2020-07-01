@@ -47,6 +47,16 @@ const routes = [
     meta:{
       footer:false
     }
+  },
+  {
+    path: '/teacher',
+    name: 'Teacher',
+    component: () => import('../views/jijie/Techer.vue')
+  },
+  {
+    path: '/yuyue',
+    name: 'yuyue',
+    component: () => import('../views/jijie/Yuyue.vue')
   }
 ]
 
