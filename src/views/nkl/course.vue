@@ -234,7 +234,7 @@ export default {
   position: fixed;
   top: 45%;
   left: 45%;
-  z-index: 3300;
+  z-index: 200;
   width: 50px;
   height: 50px;
 }

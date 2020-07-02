@@ -1,11 +1,17 @@
 <template>
   <div id="app">
-    <van-tabbar v-model="active" active-color="#D74E00" inactive-color="#B7B7B7" route v-show="this.$route.meta.footer">
+    <van-tabbar
+      v-model="active"
+      active-color="#D74E00"
+      inactive-color="#B7B7B7"
+      route
+      v-show="this.$route.meta.footer"
+    >
       <van-tabbar-item replace icon="home-o" to="/">首页</van-tabbar-item>
       <van-tabbar-item replace icon="balance-list-o" to="/course">课程</van-tabbar-item>
-      <van-tabbar-item replace icon="friends-o" to >约课记录</van-tabbar-item>
-      <van-tabbar-item replace icon="setting-o" to >练习</van-tabbar-item>
-      <van-tabbar-item replace icon="setting-o" to >我的</van-tabbar-item>
+      <van-tabbar-item replace icon="friends-o" to>约课记录</van-tabbar-item>
+      <van-tabbar-item replace icon="setting-o" to>练习</van-tabbar-item>
+      <van-tabbar-item replace icon="setting-o" to="/person">我的</van-tabbar-item>
     </van-tabbar>
     <router-view />
   </div>
@@ -25,6 +31,10 @@ export default {
 * {
   padding: 0;
   margin: 0;
+}
+html,body,#app{
+  width: 100%;
+  height: 100%;
 }
 /* vant组件里面 */
 /* /oto */

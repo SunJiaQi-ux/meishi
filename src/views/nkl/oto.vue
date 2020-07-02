@@ -28,6 +28,7 @@
                 <div><span>预约</span></div>
               </div>
           </div>
+          <div class="nkl_jia"><p>么有更多了</p></div>
       </div>
   </div>
 </template>
@@ -122,6 +123,16 @@ export default {
                     line-height: 45px;
                 }
             }
+        }
+    }
+    >.nkl_jia{
+        width: 100%;
+        height: 30px;
+        p{
+            text-align: center;
+            color:#969799;
+            font-size: 14px;
+            line-height: 30px;
         }
     }
 }

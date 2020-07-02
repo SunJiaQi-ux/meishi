@@ -65,7 +65,7 @@ export default {
         this.$router.push("/course")
       }
       if (index === 1) {
-        this.$router.push("/tutorship");
+        this.$router.push("/oto");
       }
       if (index === 2) {
         this.$router.push("/study");
