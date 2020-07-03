@@ -65,12 +65,17 @@ const routes = [
   {
     path: '/teacher',
     name: 'Teacher',
-    component: () => import('../views/jijie/Techer.vue')
+    component: () => import('../views/jijie/Techer.vue'),
   },
   {
     path: '/yuyue',
     name: 'yuyue',
-    component: () => import('../views/jijie/Yuyue.vue')
+    component: () => import('../views/jijie/Yuyue.vue'),
+  },
+  {
+    path: '/lixue',
+    name: 'lixue',
+    component: () => import('../views/jijie/Lixue.vue'),
   },
   {
     path: '/kexiang',

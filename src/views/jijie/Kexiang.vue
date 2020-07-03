@@ -28,13 +28,84 @@
     </div>
 
     <div class="fif">
-
+        <p>课程大纲</p>
+        <div>
+            <ul>
+                <li class="li1">·</li>
+                <li class="li2">回放</li>
+                <li class="li3">第一讲第一课时</li>
+            </ul>
+            <ol>
+                <li>李青</li>
+                <li>03月21日 13:00-15:00</li>
+            </ol>
+        </div>
+        <div>
+            <ul>
+                <li class="li1">·</li>
+                <li class="li2">回放</li>
+                <li class="li3">第一讲第一课时</li>
+            </ul>
+            <ol>
+                <li>李青</li>
+                <li>03月21日 13:00-15:00</li>
+            </ol>
+        </div><div>
+            <ul>
+                <li class="li1">·</li>
+                <li class="li2">回放</li>
+                <li class="li3">第一讲第一课时</li>
+            </ul>
+            <ol>
+                <li>李青</li>
+                <li>03月21日 13:00-15:00</li>
+            </ol>
+        </div><div>
+            <ul>
+                <li class="li1">·</li>
+                <li class="li2">回放</li>
+                <li class="li3">第一讲第一课时</li>
+            </ul>
+            <ol>
+                <li>李青</li>
+                <li>03月21日 13:00-15:00</li>
+            </ol>
+        </div><div>
+            <ul>
+                <li class="li1">·</li>
+                <li class="li2">回放</li>
+                <li class="li3">第一讲第一课时</li>
+            </ul>
+            <ol>
+                <li>李青</li>
+                <li>03月21日 13:00-15:00</li>
+            </ol>
+        </div><div>
+            <ul>
+                <li class="li1">·</li>
+                <li class="li2">回放</li>
+                <li class="li3">第一讲第一课时</li>
+            </ul>
+            <ol>
+                <li>李青</li>
+                <li>03月21日 13:00-15:00</li>
+            </ol>
+        </div><div>
+            <ul>
+                <li class="li1">·</li>
+                <li class="li2">回放</li>
+                <li class="li3">第一讲第一课时</li>
+            </ul>
+            <ol>
+                <li>李青</li>
+                <li>03月21日 13:00-15:00</li>
+            </ol>
+        </div>
     </div>
 
-    <div class="empty">
+    <div class="empty"></div>
 
-    </div>
-    <button>立即学习</button>
+    <button @click="jump">立即学习</button>
 
   </div>
 </template>
@@ -49,7 +120,11 @@ export default {
   props: {},
   components: {},
   mounted() {},
-  methods: {}
+  methods: {
+      jump(){
+          this.$router.push('/lixue')
+      }
+  }
 };
 </script>
 
@@ -131,6 +206,50 @@ body{
     width: 7.4rem;
     height: 9.74rem;
     border-bottom: 0.3rem solid #f0f2f5;
+    p{
+        margin-top: 0.28rem;
+        margin-left: 0.28rem;
+        font-size: 0.32rem;
+    }
+    div{
+        width: 3.77rem;
+        height: 1.1rem;
+        // background: #000;
+        margin-left: 0.56rem;
+        ul{
+            display: flex;
+            font-size: 0.22rem;
+            height: 0.4rem;
+            // background: #000;
+            margin-top: 0.23rem;
+            line-height: 0.4rem;
+            .li1{
+                color:#eb7e36;
+                font-size: 0.8rem;
+            }
+            .li2{
+                background: #eb7e36;
+                color:white;
+                width: 0.64rem;
+                font-size: 0.24rem;
+                text-align: center;
+                border-radius: 0.1rem;
+            }
+            .li3{
+                margin-left: 0.13rem;
+                font-size: 0.24rem;
+            }
+        }
+        ol{
+            margin-top: 0.1rem;
+            display: flex;
+            font-size: 0.24rem;
+            margin-left: 0.44rem;
+            li{
+                margin-right: 0.24rem;
+            }
+        }
+    }
 }
 .empty{
     width: 7.4rem;
