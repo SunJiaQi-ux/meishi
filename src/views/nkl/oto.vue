@@ -4,10 +4,10 @@
       <div class="nkl_head">
         <van-nav-bar title="一对一辅导">
              <template #left>
-                <router-link to="/"><van-icon name="arrow-left" size="24"/></router-link>
+                <router-link to="/"><van-icon name="arrow-left" size="0.3rem"/></router-link>
             </template>
             <template #right>
-                <van-icon name="search" size="28" />
+                <van-icon name="search" size="0.4rem" />
             </template>
         </van-nav-bar>
       </div>
@@ -23,9 +23,9 @@
           <!-- 列表 -->
           <div class="nkl_list">
               <div class="nkl-list" v-for="(item,index) in otolist" :key="index">
-                <div><img :src="item.avatar" alt=""></div>
+                <img :src="item.avatar" alt="">
                 <div><p>{{item.real_name}}</p><p>{{item.sex==0?'男':'女'}} {{item.teach_age}}年教龄</p></div>
-                <div><span>预约</span></div>
+                <span>预约</span>
               </div>
           </div>
           <div class="nkl_jia"><p>么有更多了</p></div>
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import '../../assets/rem'
 export default {
   name: "",
   data() {
@@ -59,80 +60,78 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+html,body{
+    font-size: 0.16rem;
+}
 // 头部
 .nkl_head{
     position: fixed;
-    width: 100%;
-    height: 66px;
-    background:palegoldenrod;
+    width: 7.4rem;
+    height: 0.89rem;
 }
 //中间
 .nkl_cont{
     width: 100%;
     height: 100%;
     background: #f0f2f5;
-    padding-top:66px;
+    padding-top:0.89rem;
     // 列表
     >.nkl_list{
-        min-height: 600px;
+        min-height: 0.6rem;;
         clear: both;
         >.nkl-list{
             margin: 0 auto;
-            margin-top: 15px;
-            width: 90%;
-            height: 118px;
-            padding:30px 34px 28px 24px;
-            border-radius: 6px;
+            margin-top: 0.18rem;
+            width: 7rem;
+            height: 1.62rem;
+            padding:0.4rem 0.32rem;
+            border-radius: 0.1rem;
             background: #fff;
             display: flex;
-            
+            align-items: center;
             box-sizing: border-box;
-            div:nth-of-type(1){
-                width: 20%;
-                margin-right: 4%;
                 img{
-                    width: 100%;
-                    height: 50px;
+                    width: 0.78rem;
+                    height: 0.8rem;
                     border-radius: 50%;
+                    margin-right:0.24rem;
                 }
-            }
-            div:nth-of-type(2){
-                width: 60%;
+    
+            div{
+                flex: 1;
                 p:nth-of-type(1){
                     color:#595e68;
-                    font-size: 22px;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
+                    font-size: 0.28rem;
+                    margin: 0.06rem 0 0.1rem 0;
                 }
                 p:nth-of-type(2){
-                    color:#595e68;
-                    font-size: 15px;
+                    color:#b7b7b7;
+                    font-size: 0.22rem;
                 }
             }
-            div:nth-of-type(3){
-                width: 20%;
+        
                 span{
                     display: inline-block;
-                    width: 100%;
-                    height: 45px;
+                    width:1.34rem;
+                    height: 0.62rem;
                     background: #ebeefe;
-                    border-radius: 20px;
+                    border-radius: 0.4rem;
                     text-align: center;
                     color:#eb6100;
-                    font-size: 18px;
-                    line-height: 45px;
+                    font-size: 0.3rem;
+                    line-height: 0.62rem;
                 }
-            }
+    
         }
     }
     >.nkl_jia{
         width: 100%;
-        height: 30px;
+        height: 0.6rem;
         p{
             text-align: center;
             color:#969799;
-            font-size: 14px;
-            line-height: 30px;
+            font-size: 0.25rem;
+            line-height: 0.6rem;
         }
     }
 }

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <van-nav-bar title="课程详情" left-text="" left-arrow>
-      <template #right>
-        <van-icon name="replay" size="18" />
-      </template>
-    </van-nav-bar>
+    <div class="title">
+        <div><van-icon name="arrow-left" @click="back"/></div>
+        <div>课程详情</div>
+        <div></div>
+    </div>
     
     <div class="fir">
         <ul>
@@ -123,6 +123,9 @@ export default {
   methods: {
       jump(){
           this.$router.push('/lixue')
+      },
+      back(){
+          this.$router.go(-1)
       }
   }
 };
@@ -136,6 +139,25 @@ body{
     margin: 0;
     padding: 0;
     list-style: none;
+}
+.title {
+    width: 7.4rem;
+    height: 1rem;
+    line-height: 1rem;
+    // background: #5ca6f6;
+    display: flex;
+    font-size: 0.36rem;
+    border-bottom:0.01rem #ddd solid ;
+    justify-content: space-between;
+}
+.title>div:nth-of-type(1){
+    width: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title>div:nth-of-type(3){
+    width: 1rem;
 }
 .fir{
     width: 7.4rem;

@@ -40,9 +40,9 @@ html,body,#app{
 /* /oto */
 .nkl_head{
   .van-nav-bar{
-        height: 66px;
+        height:0.89rem;
         .van-nav-bar__title{
-            font-size: 24px;
+            font-size: 0.32rem;
             color:#595959;
         }
         .van-icon{
@@ -54,12 +54,13 @@ html,body,#app{
   //  分类 
   div{
     .van-dropdown-menu__bar{
-        height: 62px;
+        height:0.86rem;
     }
     .van-dropdown-menu__title{
         color:#8c8c8c;
+        line-height: 0.36rem;
         .van-ellipsis{
-            font-size: 20px;
+            font-size: 0.3rem;
         }
     }
     .van-dropdown-menu__title::after{
@@ -81,6 +82,7 @@ html,body,#app{
   }
   .van-dropdown-menu__title{
     color:#212122;
+    line-height: 0.4rem;
     .van-ellipsis{
       font-size: 0.3rem;
     }

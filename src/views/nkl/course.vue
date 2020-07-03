@@ -36,7 +36,7 @@
     </div>
     <!-- 列表 -->
     <div class="nkl_content">
-        <div class="nkl_list" v-for="(item,index) in list" :key="index">
+        <div class="nkl_list" v-for="(item,index) in list" :key="index" @click="kexiang()">
           <p>{{item.title}}</p>
           <p><van-icon name="underway-o"/> <span> 03月16日 18:30 ~ 03月22日 15:00 | 共8课时</span></p>
           <div><img src="https://baijiayun-wangxiao.oss-cn-beijing.aliyuncs.com/uploads/avatar.jpg" alt=""><span>李青</span></div>
@@ -75,7 +75,13 @@ export default {
         this.$axios(`https://www.365msmk.com/api/app/courseBasis?page=${this.page}&limit=10`).then((res)=>{
           console.log(res.data.data)
           this.list=res.data.data.list
-    })
+      })
+    },
+    // 跳转课详
+    kexiang(){
+      this.$router.push({
+        path:'/kexiang'
+      })
     }
   }
 };
