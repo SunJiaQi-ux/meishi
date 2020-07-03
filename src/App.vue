@@ -9,8 +9,8 @@
     >
       <van-tabbar-item replace icon="home-o" to="/">首页</van-tabbar-item>
       <van-tabbar-item replace icon="balance-list-o" to="/course">课程</van-tabbar-item>
-      <van-tabbar-item replace icon="friends-o" to>约课记录</van-tabbar-item>
-      <van-tabbar-item replace icon="setting-o" to>练习</van-tabbar-item>
+      <van-tabbar-item replace icon="friends-o" to="/Yueke">约课记录</van-tabbar-item>
+      <van-tabbar-item replace icon="setting-o" to="/exe">练习</van-tabbar-item>
       <van-tabbar-item replace icon="setting-o" to="/person">我的</van-tabbar-item>
     </van-tabbar>
     <router-view />

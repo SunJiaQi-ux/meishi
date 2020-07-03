@@ -105,6 +105,22 @@ const routes = [
     meta:{
       footer:false
     }
+  },
+  {
+    path: '/Yueke',
+    name: 'Yueke',
+    component: () => import('../views/hang/Yueke.vue'),
+    meta:{
+      footer:true
+    }
+  },
+  {
+    path: '/exe',
+    name: 'exe',
+    component: () => import('../views/hang/Exe.vue'),
+    meta:{
+      footer:true
+    }
   }
 ]
 
