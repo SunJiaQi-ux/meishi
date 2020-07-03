@@ -1,7 +1,7 @@
 <template>
   <div>
       <div class="title">
-        <div><van-icon name="arrow-left" @click="back"/></div>
+        <div><van-icon name="arrow-left"/></div>
         <div>视频</div>
         <div></div>
     </div>
@@ -26,9 +26,7 @@ export default {
   components: {},
   mounted() {},
   methods: {
-      back(){
-          this.$router.go(-1)
-      }
+   
   }
 };
 </script>
