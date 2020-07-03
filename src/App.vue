@@ -5,7 +5,7 @@
       <van-tabbar-item replace icon="search" to="">课程</van-tabbar-item>
       <van-tabbar-item replace icon="friends-o" to >约课记录</van-tabbar-item>
       <van-tabbar-item replace icon="setting-o" to >练习</van-tabbar-item>
-      <van-tabbar-item replace icon="setting-o" to >我的</van-tabbar-item>
+      <van-tabbar-item replace icon="setting-o" to="/person" >我的</van-tabbar-item>
     </van-tabbar>
     <router-view />
   </div>
@@ -25,5 +25,9 @@ export default {
 * {
   padding: 0;
   margin: 0;
+}
+html,body,#app{
+  width: 100%;
+  height: 100%;
 }
 </style>

@@ -57,6 +57,35 @@ const routes = [
     path: '/yuyue',
     name: 'yuyue',
     component: () => import('../views/jijie/Yuyue.vue')
+  },
+  {
+    path: '/kexiang',
+    name: 'kexiang',
+    component: () => import('../views/jijie/Kexiang.vue')
+  },
+  {
+    path: '/person',
+    name: 'Person',
+    component: () => import('../views/Person.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/mym/Login.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/mym/Register.vue'),
+    meta:{
+      footer:false
+    }
   }
 ]
 
