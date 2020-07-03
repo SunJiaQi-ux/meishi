@@ -3,7 +3,6 @@
     <div class="tutorship_header">
       <van-nav-bar
         title="一对一辅导"
-        left-text="返回"
         right-text="按钮"
         left-arrow
         @click-left="onClickLeft"
@@ -60,7 +59,7 @@ export default {
     return {
       headerItem: [{ name: "选择上课时间" }, { name: "选择老师条件" }],
       selectIndex: 0,
-      show: true,
+      show: false,
       isShow: false,
       minDate: new Date(2010, 0, 1),
       maxDate: new Date(2010, 0, 12),
