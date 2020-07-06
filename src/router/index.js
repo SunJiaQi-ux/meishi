@@ -107,6 +107,25 @@ const routes = [
     }
   },
   {
+<<<<<<< HEAD
+=======
+    path: '/Yueke',
+    name: 'Yueke',
+    component: () => import('../views/hang/Yueke.vue'),
+    meta:{
+      footer:true
+    }
+  },
+  {
+    path: '/exe',
+    name: 'exe',
+    component: () => import('../views/hang/Exe.vue'),
+    meta:{
+      footer:true
+    }
+  },
+  {
+>>>>>>> 238704d4528f0fc7b39ec7fb50e8b4342fda5b20
     path: '/mp',
     name: 'Mp',
     component: () => import('../views/mym/Mp.vue'),
@@ -144,6 +163,7 @@ const routes = [
     component: () => import('../views/jijie/Techer.vue')
   },
   {
+<<<<<<< HEAD
     path: '/yueke',
     name: 'Yueke',
     component: () => import('../views/hang/Yueke.vue'),
@@ -158,6 +178,11 @@ const routes = [
     meta:{
       footer:true
     }
+=======
+    path: '/yuyue',
+    name: 'yuyue',
+    component: () => import('../views/jijie/Yuyue.vue')
+>>>>>>> 238704d4528f0fc7b39ec7fb50e8b4342fda5b20
   }
 ]
 
