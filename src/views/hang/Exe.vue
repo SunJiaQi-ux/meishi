@@ -25,6 +25,7 @@
 
 <script>
 export default {
+  name:"exe",
   data() {
     return {
       list: []

@@ -112,7 +112,7 @@
 <script>
 import "../../assets/rem";
 export default {
-  name: "",
+  name: "Teacher",
   data() {
     return {
         active:0

@@ -82,7 +82,7 @@
 <script>
 import "../../assets/rem";
 export default {
-  name: "",
+  name: "yuyue",
   data() {
     return {};
   },
