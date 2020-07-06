@@ -84,10 +84,10 @@ const routes = [
   },
   { 
     path: '/person',
-    name: 'Person',
+    name: 'person',
     component: () => import('../views/Person.vue'),
     meta:{
-      footer:false
+      footer:true
     }
   },
   {
@@ -107,6 +107,8 @@ const routes = [
     }
   },
   {
+// <<<<<<< HEAD
+// =======
     path: '/Yueke',
     name: 'Yueke',
     component: () => import('../views/hang/Yueke.vue'),
@@ -123,38 +125,64 @@ const routes = [
     }
   },
   {
+// <<<<<<< HEAD
     path: '/kao1',
     name: 'kao1',
     component: () => import('../views/hang/Kao1.vue'),
+// =======
+// >>>>>>> 238704d4528f0fc7b39ec7fb50e8b4342fda5b20
+    path: '/mp',
+    name: 'Mp',
+    component: () => import('../views/mym/Mp.vue'),
+// >>>>>>> a9e438a3842fe06e9c8a3a8e3735b5920bc6ab49
     meta:{
       footer:false
     }
   },
   {
+// <<<<<<< HEAD
     path: '/kao2',
     name: 'kao2',
     component: () => import('../views/hang/Kao2.vue'),
+// =======
+    path: '/mstudy',
+    name: 'Mstudy',
+    component: () => import('../views/mym/Mstudy.vue'),
+// >>>>>>> a9e438a3842fe06e9c8a3a8e3735b5920bc6ab49
     meta:{
       footer:false
     }
   },
   {
+// <<<<<<< HEAD
     path: '/kao3',
     name: 'kao3',
     component: () => import('../views/hang/Kao3.vue'),
+// =======
+    path:"/balance",
+    name:"Balance",
+    component: () => import("../views/mym/Balance.vue"),
+// >>>>>>> a9e438a3842fe06e9c8a3a8e3735b5920bc6ab49
     meta:{
       footer:false
     }
   },
   {
+// <<<<<<< HEAD
     path: '/kao4',
     name: 'kao4',
     component: () => import('../views/hang/Kao4.vue'),
+// =======
+    path:"/yve",
+    name:"Yve",
+    component: () => import("../views/mym/Yve.vue"),
+// >>>>>>> a9e438a3842fe06e9c8a3a8e3735b5920bc6ab49
     meta:{
       footer:false
     }
   },
   {
+// <<<<<<< HEAD
     path: '/kao5',
     name: 'kao5',
     component: () => import('../views/hang/Kao5.vue'),
@@ -168,7 +196,34 @@ const routes = [
     component: () => import('../views/hang/Kao6.vue'),
     meta:{
       footer:false
+    },
+// =======
+    path: '/teacher',
+    name: 'Teacher',
+    component: () => import('../views/jijie/Techer.vue')
+  },
+  {
+// <<<<<<< HEAD
+    path: '/yueke',
+    name: 'Yueke',
+    component: () => import('../views/hang/Yueke.vue'),
+    meta:{
+      footer:true
     }
+  },
+  {
+    path: '/exe',
+    name: 'exe',
+    component: () => import('../views/hang/Exe.vue'),
+    meta:{
+      footer:true
+    },
+// =======
+    path: '/yuyue',
+    name: 'yuyue',
+    component: () => import('../views/jijie/Yuyue.vue')
+// >>>>>>> 238704d4528f0fc7b39ec7fb50e8b4342fda5b20
+// >>>>>>> a9e438a3842fe06e9c8a3a8e3735b5920bc6ab49
   }
 ]
 
@@ -176,6 +231,21 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
+router.beforeEach((to, from, next) => {
+
+  if(to.name=="person"){
+    if(localStorage.getItem("Token")){
+        next();
+    }else{
+      next({
+          path:"/login",
+          query:{redirect:to.fullPath}
+      })
+    }
+  }else{
+      next();
+  }
+});
 export default router

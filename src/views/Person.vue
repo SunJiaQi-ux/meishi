@@ -2,28 +2,30 @@
     <div class="person">
         <header>
             <div class="head-nei"></div>
+            
             <div class="head-one">
                 <div class="one-one">
-                    <div class="foot-one">
+                    <div class="foot-one1">
                         <img class="av-img" src="../assets/mym_img/av.jpg" alt="">
+                            <span class="span1" @click="goMp">17316213304</span>
+                        <img class="av-img2" src="../assets/mym_img/huangguan.jpg" alt="">
                     </div>
-                    <div class="foot-one"><span>17316213304</span><img src="" alt=""></div>
-                    <div class="foot-one">
+                    <div class="foot-two1">
                         <p class="one-p">去约课</p>
                     </div>
                 </div>
                 <div class="one-two">
-                    <div class="foot-one">
+                    <div class="foot-one" @click="goStudy">
                         <h3 class="two-h3">10</h3>
-                        <p>我的课程</p>
+                        <p>我的特色课</p>
                         <h5 class="two-h5">-已购课程学习-</h5>
                     </div>
                     <div class="foot-one">
                         <h3 class="two-h3">5</h3>
-                        <p>我的预约</p>
+                        <p>一对一辅导</p>
                         <h5 class="two-h5">-一对一老师预约-</h5>
                     </div>
-                    <div class="foot-one">
+                    <div class="foot-one" @click="goBalance">
                         <h3 class="two-h3">0</h3>
                         <p>剩余学习币</p>
                         <h5 class="two-h5">-查看剩余学习币-</h5>
@@ -110,11 +112,29 @@
 </template>
 
 <script>
+import "../assets/rem"
 export default {
-    name:"Person",
+    name:"person",
     data(){
         return{
 
+        }
+    },
+    methods:{
+        goMp(){
+            this.$router.push({
+                path:"/mp"
+            })
+        },
+        goStudy(){
+            this.$router.push({
+                path:"/mstudy"
+            })
+        },
+        goBalance(){
+            this.$router.push({
+                path:"/balance"
+            })
         }
     }
 }
@@ -122,37 +142,48 @@ export default {
 
 <style scoped>
 .person{
-    width: 100%;
+    width: 100vw;
     height: 100%;
 }
 header{
     width: 100%;
-    height: 235px;
+    height: 4.7rem;
 }
 .head-nei{
-    width: 750px;
-    height: 750px;
-    border-radius: 50%;
+    width: 100%;
+    height: 2.4rem;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
     background: #FC5500;
     position: absolute;
-    top: -615px;
-    left: -187px;
 }
 .head-one{
     position: absolute;
-    top: 60px;
-    left: 15px;
-    width: 345px;
-    height: 175px;
+    top: 1.2rem;
+    left: 0.3rem;
+    width: 6.8rem;
+    height: 3.4rem;
     background: #fff;
 }
+.span1{
+    font-size: 0.3rem;
+}
 .av-img{
-    width: 56px;
-
+    width: 1rem;
+}
+.av-img2{
+    width: 0.5rem;
 }
 .one-one{
     width: 100%;
     height: 50%;
+    display: flex;
+    align-items: center;
+}
+.foot-one1{
+    width: 4rem;
+    height: 100%;
+    float: left;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -167,6 +198,16 @@ header{
 .one-two div{
     text-align: center;
 }
+.one-two .foot-one h3{
+    font-size: 0.16rem;
+}
+.one-two .foot-one p{
+    font-size: 0.16rem;
+}
+.one-two .foot-one h5{
+    font-size: 0.16rem;
+
+}
 .two-h3{
     color: red;
 }
@@ -174,54 +215,59 @@ header{
     color: #CACACA;
 }
 .one-p{
-    font-size: 13px;
+    font-size: 0.13rem;
     text-align: center;
-    line-height: 24px;
-    width: 60px;
-    height: 24px;
+    line-height: 0.48rem;
+    width: 0.9rem;
+    height: 0.48rem;
     background: #FC5500;
     position: absolute;
-    right: 0px;
-    top: 32px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    right: 0rem;
+    top: 0.6rem;
+    color: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 section{
     width: 100%;
 }
 .nav{
     width: 100%;
-    height: 70px;
+    height: 1.14rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .nav-img{
-    width: 347px;
-    height: 44px;
+    width: 6.8rem;
+    height: 0.88rem;
 }
 footer{
-    padding: 12px;
+    padding: 0.24rem;
+    height: 10rem;
 }
 footer>div{
     width: 100%;
-    height: 125px;
+    height: 2.2rem;
     border-bottom: 1px solid gray;
 }
 .foot-div{
     display: flex;
 }
 .foot-div div{
-    width: 90px;
-    height: 100px;
+    width: 1.8rem;
+    height: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .foot-div div p{
-    margin: 8px;
+    margin: 0.08rem;
     color: #626262;
-    font-size: 14px;
+    font-size: 0.14rem;
+}
+h4{
+    font-size: 0.3rem;
 }
 </style>

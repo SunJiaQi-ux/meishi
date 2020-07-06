@@ -37,16 +37,16 @@ export default {
       value: "",
       list: [],
       sel: 1,
-      selone:0
+      selone: 0
     };
   },
   methods: {
     back() {
       window.history.back();
     },
-    add(id,index) {
+    add(id, index) {
       this.sel = id;
-      this.selone = index
+      this.selone = index;
     }
   },
   mounted() {
@@ -58,11 +58,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.sel{
-    color: red;
+.sel {
+  color: red;
 }
-span{
-    text-align: center;
+span {
+  text-align: center;
 }
 header {
   width: 100%;
