@@ -4,7 +4,7 @@
       <van-nav-bar
         title="一对一辅导"
         left-text="返回"
-        right-text="按钮"
+        right-text="搜索"
         left-arrow
         @click-left="onClickLeft"
         @click-right="onClickRight"
