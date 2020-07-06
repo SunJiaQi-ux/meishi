@@ -49,6 +49,7 @@
 
 <script>
 import axios from "axios";
+// import "../assets/rem.js";
 
 export default {
   components: {},
@@ -61,8 +62,11 @@ export default {
   },
   methods: {
     onClick: function(index) {
+      if (index===0) {
+        this.$router.push("/course")
+      }
       if (index === 1) {
-        this.$router.push("/tutorship");
+        this.$router.push("/oto");
       }
       if (index === 2) {
         this.$router.push("/study");
@@ -79,28 +83,32 @@ export default {
 };
 </script>
 
-<style scoped>
+
+<style lang="scss" scoped>
+* {
+  font-size: 16px;
+}
 .home {
   background-color: #f0f2f5;
 }
 .home_header {
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
 }
 .my-swipe {
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
 }
 .van-swipe-item img {
   width: 100%;
 }
 .home_body {
   width: 100%;
-  height: 500px;
+  height: 31.25rem;
 }
 .home_body_header {
   width: 95%;
-  height: 103px;
+  height: 6.4375rem;
   padding: 0 2.5%;
   position: relative;
   bottom: 20px;
@@ -110,13 +118,13 @@ export default {
 }
 .home_body_header_item {
   width: 29%;
-  height: 103px;
+  height: 6.4375rem;
   background: #fff;
   border-radius: 15px;
 }
 .home_body_header_div {
   width: 100%;
-  height: 50px;
+  height: 3.125rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +160,7 @@ export default {
 }
 .teacherItem_list {
   width: 91%;
-  height: 81px;
+  height: 5.0625rem;
   padding: 0 4.5%;
   margin-bottom: 10px;
   display: inline-flex;
@@ -162,7 +170,7 @@ export default {
 }
 .teacherItem_image {
   width: 13%;
-  height: 40px;
+  height: 2.5rem;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -172,16 +180,16 @@ export default {
 }
 .teacherItem_title {
   width: 77%;
-  height: 40px;
+  height: 2.5rem;
   padding-left: 10%;
   overflow: hidden;
 }
 .teacherItem_name {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .teacherItem_introduce {
   width: 100%;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #b7b7b7;
 }
 </style>

@@ -1,0 +1,33 @@
+{
+    "exe":[
+        {
+            "id":1,
+            "name":"考点专练",
+            "img":"http://localhost:8080/image/02.png"
+        },
+        {
+            "id":2,
+            "name":"套卷练习",
+            "img":"http://localhost:8080/image/03.jpg"
+        },
+        {
+            "id":3,
+            "name":"仿真模考",
+            "img":"http://localhost:8080/image/04.png"
+        },
+        {
+            "id":4,
+            "name":"错题练习",
+            "img":"http://localhost:8080/image/05.png"
+        },
+        {
+            "id":5,
+            "name":"测评记录",
+            "img":"http://localhost:8080/image/06.png"
+        },        {
+            "id":6,
+            "name":"习题收藏",
+            "img":"http://localhost:8080/image/07.png"
+        }
+    ]
+}

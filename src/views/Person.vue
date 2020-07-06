@@ -114,7 +114,7 @@
 <script>
 import "../assets/rem"
 export default {
-    name:"Person",
+    name:"person",
     data(){
         return{
 
@@ -304,6 +304,7 @@ section{
 }
 footer{
     padding: 0.24rem;
+    height: 10rem;
 }
 footer>div{
     width: 100%;

@@ -10,7 +10,13 @@
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
+<<<<<<< HEAD
     "element-ui": "^2.13.2",
+=======
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+>>>>>>> 6187b1837708e977a66e4f1f92631f820631c2e5
     "vant": "^2.8.7",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
@@ -26,7 +32,11 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.14.1",
+<<<<<<< HEAD
     "sass-loader": "^7.3.1",
+=======
+    "sass-loader": "^9.0.1",
+>>>>>>> 6187b1837708e977a66e4f1f92631f820631c2e5
     "vue-template-compiler": "^2.6.11"
   },
   "rules": {
