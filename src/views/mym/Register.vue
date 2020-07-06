@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import "../../assets/rem"
 export default {
     name:"Register",
     data(){
@@ -45,22 +46,22 @@ export default {
 }
 .register-head{
     width: 100%;
-    height: 200px;
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .register-head .img1{
-    width: 84px;
-    height: 84px;
+    width: 1.68rem;
+    height: 1.68rem;
 }
 .register-head .img_wen{
-    width: 170px;
-    height: 45px;
+    width: 3.4rem;
+    height: 0.9rem;
 }
 .register-contain{
     width: 100%;
-    height: 200px;
+    height: 4rem;
 
 }
 .contain-one{
@@ -69,24 +70,24 @@ export default {
 }
 .contain-one .in-phone{
     width: 100%;
-    height: 40px;
+    height: 0.8rem;
     border: none;
     border-bottom: 1px solid #EB6100;
-    margin-top: 5px;
+    font-size: 0.4rem;
     
 }
 .contain-one .in-pass{
     width: 100%;
-    height: 40px;
+    height: 0.8rem;
     border: none;
     border-bottom: 1px solid #EB6100;
-    margin-top: 5px;
+    font-size: 0.4rem;
 }
 .contain-two{
     position: relative;
     width: 80%;
     margin: 0 auto;
-    margin-top: 5px;
+    margin-top: 0.1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -94,28 +95,29 @@ export default {
     width: 80%;
 }
 .login-btn{
-    width: 300px;
-    height: 44px;
-    border-radius: 50px;
+    width: 6rem;
+    height: 0.88rem;
+    border-radius: 0.5rem;
     border: none;
     background: #EB6100;
-    margin: 40px;
+    margin: 0.8rem;
+    font-size: 0.4rem;
 }
 .two-pass{
-    font-size: 13px;
+    font-size: 0.13rem;
     color: #9D9D9D;
 }
 .two-log{
-    font-size: 13px;
+    font-size: 0.13rem;
     color: #9D9D9D;
 }
 .yanzheng-btn{
     position: absolute;
-    width: 100px;
-    right: 36px;
-    top: 215px;
+    width: 2rem;
+    right: 0.72rem;
+    top: 4.6rem;
     background: #fff;
-    font-size: 13px;
+    font-size: 0.13rem;
     border: none;
     color: #EB6100;
 }

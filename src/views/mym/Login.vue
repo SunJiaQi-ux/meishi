@@ -7,7 +7,7 @@
 
         <div class="login-contain">
             <div class="contain-one">
-                <input class="in-phone" type="text" placeholder="请输入手机号">
+                <input class="in-phone " type="text" placeholder="请输入手机号">
                 <input class="in-pass" type="text" placeholder="请输入密码">
             </div>
             <div class="contain-two">
@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import "../../assets/rem"
 export default {
     name:"Login",
     data(){
@@ -49,22 +50,22 @@ export default {
 }
 .login-head{
     width: 100%;
-    height: 200px;
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .login-head .img1{
-    width: 84px;
-    height: 84px;
+    width: 1.68rem;
+    height: 1.68rem;
 }
 .login-head .img_wen{
-    width: 170px;
-    height: 45px;
+    width: 2.4rem;
+    height: 0.9rem;
 }
 .login-contain{
     width: 100%;
-    height: 200px;
+    height: 4rem;
 
 }
 .contain-one{
@@ -73,23 +74,23 @@ export default {
 }
 .contain-one .in-phone{
     width: 100%;
-    height: 40px;
+    height: 0.8rem;
     border: none;
     border-bottom: 1px solid #EB6100;
-    margin-top: 5px;
+    font-size: 0.4rem;
     
 }
 .contain-one .in-pass{
     width: 100%;
-    height: 40px;
+    height: 0.8rem;
     border: none;
     border-bottom: 1px solid #EB6100;
-    margin-top: 5px;
+    font-size: 0.4rem;
 }
 .contain-two{
     width: 80%;
     margin: 0 auto;
-    margin-top: 5px;
+    margin-top: 0.1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -97,19 +98,38 @@ export default {
     width: 80%;
 }
 .login-btn{
-    width: 300px;
-    height: 44px;
-    border-radius: 50px;
+    width: 6rem;
+    height: 0.88rem;
+    border-radius: 0.5rem;
     border: none;
     background: #EB6100;
-    margin: 40px;
+    margin: 0.8rem;
+    font-size: 0.5rem;
 }
 .two-pass{
-    font-size: 13px;
+    font-size: 0.26rem;
     color: #9D9D9D;
 }
 .two-log{
-    font-size: 13px;
+    font-size: 0.26rem;
     color: #9D9D9D;
+}
+input::-webkit-input-placeholder{
+    
+    color: #9D9D9D;
+    font-size: 0.4rem;
+}
+input::-moz-placeholder{
+    color: #9D9D9D;
+    font-size: 0.4rem;
+}
+
+input:-moz-placeholder{
+    color: #9D9D9D;
+    font-size: 0.4rem;
+}
+input:-ms-input-placeholder{
+    color: #9D9D9D;
+    font-size: 0.4rem;
 }
 </style>

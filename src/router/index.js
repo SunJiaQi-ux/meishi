@@ -121,6 +121,40 @@ const routes = [
     meta:{
       footer:true
     }
+  },
+  {
+    path: '/mp',
+    name: 'Mp',
+    component: () => import('../views/mym/Mp.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/mstudy',
+    name: 'Mstudy',
+    component: () => import('../views/mym/Mstudy.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path:"/balance",
+    name:"Balance",
+    component: () => import("../views/mym/Balance.vue"),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/teacher',
+    name: 'Teacher',
+    component: () => import('../views/jijie/Techer.vue')
+  },
+  {
+    path: '/yuyue',
+    name: 'yuyue',
+    component: () => import('../views/jijie/Yuyue.vue')
   }
 ]
 
