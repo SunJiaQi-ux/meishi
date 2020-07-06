@@ -7,15 +7,15 @@
 
         <div class="login-contain">
             <div class="contain-one">
-                <input class="in-phone " type="text" placeholder="请输入手机号">
-                <input class="in-pass" type="text" placeholder="请输入密码">
+                <input class="in-phone " type="text" placeholder="请输入手机号" v-model="loginUser.phone">
+                <input class="in-pass" type="text" placeholder="请输入密码" v-model="loginUser.password">
             </div>
             <div class="contain-two">
                 <p class="two-pass">找回密码</p>
                 <p class="two-log" @click="goregister">注册/验证码登录</p>
             </div>
             <div class="contain-three">
-                <button class="login-btn">登录</button>
+                <button class="login-btn" @click="login">登录</button>
             </div>
             
         </div>
@@ -31,6 +31,10 @@ export default {
     name:"Login",
     data(){
         return{
+            loginUser:{
+                phone:"",
+                password:""
+            }
         }
     },
     methods: {
@@ -38,6 +42,15 @@ export default {
             this.$router.push({
                 name:"Register"
             })
+        },
+        login(){
+            let that = this
+            if(this.loginUser.phone !=""&&this.loginUser.password !=""){
+                localStorage.setItem("Token",JSON.stringify(this.loginUser))
+                that.$router.push({
+                    path:"/person"
+                })
+            }
         }
 	}
 }

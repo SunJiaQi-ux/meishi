@@ -1,9 +1,9 @@
 <template>
 <div class="balance">
        <header>
-            <img src="../../assets/mym_img/fan.jpg" alt="">   
+            <img src="../../assets/mym_img/fan.jpg" alt="" @click="goBack">   
             <p>我的余额</p>
-            <span class="yve">余额明细</span>
+            <span class="yve" @click="goYve">余额明细</span>
         </header> 
         <div class="nav">
             <div>我的余额</div>
@@ -61,6 +61,16 @@ export default {
     data(){
         return{
 
+        }
+    },
+    methods:{
+        goBack(){
+            window.history.go(-1)
+        },
+        goYve(){
+            this.$router.push({
+                path:"/yve"
+            })
         }
     }
 }

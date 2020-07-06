@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -19,9 +20,22 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/course',
+    name: 'course',
+    component: () => import('../views/nkl/course.vue'),
     meta:{
       footer:true
+    }
+  },
+  {
+    path: '/oto',
+    name: 'oto',
+    component: () => import('../views/nkl/oto.vue'),
+    meta:{
+      footer:false
     }
   },
   {
@@ -49,11 +63,31 @@ const routes = [
     }
   },
   {
+    path: '/teacher',
+    name: 'Teacher',
+    component: () => import('../views/jijie/Techer.vue'),
+  },
+  {
+    path: '/yuyue',
+    name: 'yuyue',
+    component: () => import('../views/jijie/Yuyue.vue'),
+  },
+  {
+    path: '/lixue',
+    name: 'lixue',
+    component: () => import('../views/jijie/Lixue.vue'),
+  },
+  {
+    path: '/kexiang',
+    name: 'kexiang',
+    component: () => import('../views/jijie/Kexiang.vue')
+  },
+  { 
     path: '/person',
-    name: 'Person',
+    name: 'person',
     component: () => import('../views/Person.vue'),
     meta:{
-      footer:false
+      footer:true
     }
   },
   {
@@ -97,14 +131,33 @@ const routes = [
     }
   },
   {
+    path:"/yve",
+    name:"Yve",
+    component: () => import("../views/mym/Yve.vue"),
+    meta:{
+      footer:false
+    }
+  },
+  {
     path: '/teacher',
     name: 'Teacher',
     component: () => import('../views/jijie/Techer.vue')
   },
   {
-    path: '/yuyue',
-    name: 'yuyue',
-    component: () => import('../views/jijie/Yuyue.vue')
+    path: '/yueke',
+    name: 'Yueke',
+    component: () => import('../views/hang/Yueke.vue'),
+    meta:{
+      footer:true
+    }
+  },
+  {
+    path: '/exe',
+    name: 'exe',
+    component: () => import('../views/hang/Exe.vue'),
+    meta:{
+      footer:true
+    }
   }
 ]
 
@@ -112,6 +165,21 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
+router.beforeEach((to, from, next) => {
+
+  if(to.name=="person"){
+    if(localStorage.getItem("Token")){
+        next();
+    }else{
+      next({
+          path:"/login",
+          query:{redirect:to.fullPath}
+      })
+    }
+  }else{
+      next();
+  }
+});
 export default router
