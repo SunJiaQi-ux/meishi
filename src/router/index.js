@@ -121,6 +121,54 @@ const routes = [
     meta:{
       footer:true
     }
+  },
+  {
+    path: '/kao1',
+    name: 'kao1',
+    component: () => import('../views/hang/Kao1.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/kao2',
+    name: 'kao2',
+    component: () => import('../views/hang/Kao2.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/kao3',
+    name: 'kao3',
+    component: () => import('../views/hang/Kao3.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/kao4',
+    name: 'kao4',
+    component: () => import('../views/hang/Kao4.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/kao5',
+    name: 'kao5',
+    component: () => import('../views/hang/Kao5.vue'),
+    meta:{
+      footer:false
+    }
+  },
+  {
+    path: '/kao6',
+    name: 'kao6',
+    component: () => import('../views/hang/Kao6.vue'),
+    meta:{
+      footer:false
+    }
   }
 ]
 
