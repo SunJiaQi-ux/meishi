@@ -27,6 +27,7 @@
 
 <script>
 export default {
+  name:"Yueke",
   data() {
     return {
       li: [],

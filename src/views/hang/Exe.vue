@@ -3,7 +3,7 @@
     <p>练习</p>
     <section>
       <ul>
-        <li v-for="(item,index) in list" :key="index">
+        <li v-for="(item,index) in list" :key="index" @click="add(item,index)">
           <img :src="item.img" />
           <span>{{item.name}}</span>
         </li>
@@ -25,6 +25,7 @@
 
 <script>
 export default {
+  name:"exe",
   data() {
     return {
       list: []
@@ -34,7 +35,42 @@ export default {
     this.$axios.get("/api/exe.json").then(res => {
       this.list = res.data.exe;
     });
-  }
+  },
+  methods: {
+    add(item,index){
+      if(index==0){
+        this.$router.push({
+          name:'kao1',
+          query:{item:item.name}
+        })
+      }else if(index == 1){
+        this.$router.push({
+          name:'kao2',
+          query:{item:item.name}
+        })
+      }else if(index == 2){
+        this.$router.push({
+          name:'kao3',
+          query:{item:item.name}
+        })
+      }else if(index == 3){
+        this.$router.push({
+          name:'kao4',
+          query:{item:item.name}
+        })
+      }else if(index == 4){
+        this.$router.push({
+          name:'kao5',
+          query:{item:item.name}
+        })
+      }else if(index == 5){
+        this.$router.push({
+          name:'kao6',
+          query:{item:item.name}
+        })
+      }
+    }
+  },
 };
 </script>
 

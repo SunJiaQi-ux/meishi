@@ -42,11 +42,11 @@
             <div class="foot-one">
                 <h4>课程相关</h4>
                 <div class="foot-div">
-                    <div>
+                    <div @click="goLs">
                         <van-icon name="user-o" color="#FF944B" size="30px" />
-                        <p>关注的老师</p>
+                        <p >关注的老师</p>
                     </div>
-                    <div>
+                    <div  @click="goSc">
                         <van-icon name="bars" color="#FF944B" size="30px" />
                         <p>我的收藏</p>
                     </div>
@@ -55,15 +55,15 @@
             <div class="foot-two">
                 <h4>订单相关</h4>
                 <div class="foot-div">
-                    <div>
+                    <div @click="goDd">
                         <van-icon name="bill" color="#FC5500" size="30px" />
                         <p>课程订单</p>
                     </div>
-                    <div>
+                    <div @click="hydd">
                         <van-icon name="bill" color="#FC5500" size="30px" />
                         <p>会员订单</p>
                     </div>
-                    <div>
+                    <div @click="ykdd">
                         <van-icon name="bill" color="#FC5500" size="30px" />
                         <p>约课订单</p>
                     </div>
@@ -72,15 +72,15 @@
             <div class="foot-three">
                 <h4>我的账户</h4>
                 <div class="foot-div">
-                    <div>
+                    <div @click="yhq">
                         <van-icon name="gold-coin-o" color="#FFAF00" size="30px" />
                         <p>优惠券</p>
                     </div>
-                    <div>
+                    <div @click="xxk">
                         <van-icon name="gold-coin-o" color="#FFAF00" size="30px" />
                         <p>学习卡</p>
                     </div>
-                    <div>
+                    <div @click="hy">
                         <van-icon name="gold-coin-o" color="#FFAF00" size="30px" />
                         <p>会员</p>
                     </div>
@@ -89,19 +89,19 @@
             <div class="foot-four">
                 <h4>自助服务</h4>
                 <div class="foot-div">
-                    <div>
+                    <div @click="wdxx">
                         <van-icon name="column" color="#FF9A2A" size="30px" />
                         <p>我的消息</p>
                     </div>
-                    <div>
+                    <div @click="yjfk">
                         <van-icon name="column" color="#FF9A2A" size="30px" />
                         <p>意见反馈</p>
                     </div>
-                    <div>
+                    <div @click="zxkf">
                         <van-icon name="column" color="#FF9A2A" size="30px" />
                         <p>在线服务</p>
                     </div>
-                    <div>
+                    <div @click="sz">
                         <van-icon name="column" color="#FF9A2A" size="30px" />
                         <p>设置</p>
                     </div>
@@ -114,7 +114,7 @@
 <script>
 import "../assets/rem"
 export default {
-    name:"Person",
+    name:"person",
     data(){
         return{
 
@@ -134,6 +134,66 @@ export default {
         goBalance(){
             this.$router.push({
                 path:"/balance"
+            })
+        },
+        goLs(){
+            this.$router.push({
+                path:"/gzls"
+            })
+        },
+        goSc(){
+            this.$router.push({
+                path:"/wdsc"
+            })
+        },
+        goDd(){
+            this.$router.push({
+                path:"/kcdd"
+            })
+        },
+        hydd(){
+            this.$router.push({
+                path:"/hydd"
+            })
+        },
+        ykdd(){
+            this.$router.push({
+                path:"/ykdd"
+            })
+        },
+        yhq(){
+            this.$router.push({
+                path:"/yhq"
+            })
+        },
+        xxk(){
+            this.$router.push({
+                path:"/xxk"
+            })
+        },
+        hy(){
+            this.$router.push({
+                path:"/hy"
+            })
+        },
+        wdxx(){
+            this.$router.push({
+                path:"/wdxx"
+            })
+        },
+        yjfk(){
+            this.$router.push({
+                path:"/yjfk"
+            })
+        },
+        zxkf(){
+            this.$router.push({
+                path:"/zxkf"
+            })
+        },
+        sz(){
+            this.$router.push({
+                path:"/sz"
             })
         }
     }
@@ -244,6 +304,7 @@ section{
 }
 footer{
     padding: 0.24rem;
+    height: 10rem;
 }
 footer>div{
     width: 100%;

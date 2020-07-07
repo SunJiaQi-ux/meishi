@@ -73,7 +73,7 @@ export default {
     //获取特色课列表数据 
     courseList(){
         this.$axios(`https://www.365msmk.com/api/app/courseBasis?page=${this.page}&limit=10`).then((res)=>{
-          console.log(res.data.data)
+          console.log(res)
           this.list=res.data.data.list
       })
     },

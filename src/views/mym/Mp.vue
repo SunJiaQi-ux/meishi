@@ -1,7 +1,7 @@
 <template>
 <div id="mp">
     <header>
-        <div><img class="head-img" src="../../assets/mym_img/fan.jpg" alt=""></div>
+        <div><img class="head-img" src="../../assets/mym_img/fan.jpg" alt="" @click="goBack"></div>
         <div class="person">我的个人信息</div>
         <div></div>
     </header>
@@ -71,7 +71,17 @@
 <script>
 import "../../assets/rem"
 export default {
+    name:"Mp",
+    data(){
+        return{
 
+        }
+    },
+    methods:{
+        goBack(){
+            window.history.go(-1)
+        }
+    }
 }
 </script>
 
