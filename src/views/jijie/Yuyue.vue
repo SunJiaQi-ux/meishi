@@ -84,7 +84,9 @@ import "../../assets/rem";
 export default {
   name: "yuyue",
   data() {
-    return {};
+    return {
+        active:0
+    };
   },
   props: {},
   components: {},
