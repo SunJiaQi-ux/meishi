@@ -192,33 +192,6 @@ const routes = [
     },
   },
   {
-    path: '/teacher',
-    name: 'Teacher',
-    component: () => import('../views/jijie/Techer.vue')
-  },
-  {
-    // <<<<<<< HEAD
-    path: '/yueke',
-    name: 'Yueke',
-    component: () => import('../views/hang/Yueke.vue'),
-    meta: {
-      footer: true
-    }
-  },
-  {
-    path: '/exe',
-    name: 'exe',
-    component: () => import('../views/hang/Exe.vue'),
-    meta:{
-      footer:true
-    }
-  },
-  {
-    path: '/yuyue',
-    name: 'yuyue',
-    component: () => import('../views/jijie/Yuyue.vue')
-  },
-  {
     path: '/gzls',
     name: 'gzls',
     component: () => import('../views/lfy/gzls.vue')
