@@ -93,15 +93,18 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+*{
+  font-size: 16px;
+}
 .tutorship_container {
   width: 100%;
-  height: 667px;
+  height: 41.6875rem;
   background-color: #f0f2f5;
 }
 .tuorship_header_bottom {
   width: 100%;
-  height: 42px;
+  height: 2.625rem;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -109,7 +112,7 @@ export default {
 }
 .tuorship_header_item {
   width: 50%;
-  height: 42px;
+  height: 2.625rem;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -131,10 +134,10 @@ export default {
 }
 .tuorship_body_teacher_content_header {
   width: 100%;
-  height: 12px;
+  height: 0.75rem;
   padding-top: 16px;
   padding-bottom: 10px;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .tuorship_body_teacher_item {
   width: 100%;
@@ -144,7 +147,7 @@ export default {
 }
 .tuorship_tacher_form {
   width: 18%;
-  height: 33px;
+  height: 2.0625rem;
   margin-right: 23px;
   margin-bottom: 7px;
   background-color: #f5f5f5;
@@ -152,11 +155,11 @@ export default {
   justify-content: center;
   align-items: center;
   color: #646464;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 .torship_bottom {
   width: 100%;
-  height: 44px;
+  height: 2.75rem;
   position: fixed;
   bottom: 0;
   display: inline-flex;
@@ -164,7 +167,7 @@ export default {
 }
 .torship_left {
   width: 50%;
-  height: 44px;
+  height: 2.75rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -173,7 +176,7 @@ export default {
 }
 .torship_right {
   width: 50%;
-  height: 44px;
+  height: 2.75rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
