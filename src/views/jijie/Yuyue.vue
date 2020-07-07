@@ -2,7 +2,7 @@
   <div>
 
       <div class="title">
-        <div><van-icon name="arrow-left" /></div>
+        <div><van-icon name="arrow-left" @click="back"/></div>
         <div>预约课程</div>
         <div></div>
     </div>
@@ -40,12 +40,26 @@
                    <div class="banner2">
                       <figure>
                           <img src="https://wap.365msmk.com/img/empty.0d284c2e.png" alt="">
-                          <figcaption>暂无评论</figcaption>
+                          <figcaption>暂无信息</figcaption>
                       </figure>
                   </div>
                 </van-tab>
-                <van-tab title="周二"></van-tab>
-                <van-tab title="周三"></van-tab>
+                <van-tab title="周二">
+                    <div class="banner2">
+                      <figure>
+                          <img src="https://wap.365msmk.com/img/empty.0d284c2e.png" alt="">
+                          <figcaption>暂无信息</figcaption>
+                      </figure>
+                  </div>
+                </van-tab>
+                <van-tab title="周三">
+                    <div class="banner2">
+                      <figure>
+                          <img src="https://wap.365msmk.com/img/empty.0d284c2e.png" alt="">
+                          <figcaption>暂无信息</figcaption>
+                      </figure>
+                  </div>
+                </van-tab>
                 <van-tab title="周四"></van-tab>
                 <van-tab title="周五"></van-tab>
                 <van-tab title="周六"></van-tab>
@@ -68,14 +82,18 @@
 <script>
 import "../../assets/rem";
 export default {
-  name: "",
+  name: "yuyue",
   data() {
     return {};
   },
   props: {},
   components: {},
   mounted() {},
-  methods: {}
+  methods: {
+      back(){
+          this.$router.go(-1)
+      }
+  }
 };
 </script>
 
@@ -207,16 +225,12 @@ header{
 }
 .center>.time{
   width: 6.88rem;
-  height: 1.4rem;
   background: #ffffff;
   margin: 0 auto;
   border-radius: 0.1rem;
 }
-.van-tab{
-  height: 1.4rem;
-}
 .banner2{
-    width: 7.4rem;
+    width: 6.88rem;
     height: 7.3rem;
     display: flex;
     justify-content: space-around;
@@ -233,6 +247,7 @@ header{
 button{
     position: fixed;
     left: 0;
+    bottom: 0;
     width: 7.4rem;
     height: 0.88rem;
     background: #eb6100;

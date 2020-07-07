@@ -112,7 +112,7 @@
 <script>
 import "../../assets/rem";
 export default {
-  name: "",
+  name: "Teacher",
   data() {
     return {
         active:0
@@ -234,6 +234,7 @@ header{
     width: 7.4rem;
     height: 8rem;
     display:flex;
+    padding-bottom: 0.88rem;
 }
 .banner>ul{
     width: 1.78rem;

@@ -60,7 +60,7 @@ export default {
     return {
       headerItem: [{ name: "选择上课时间" }, { name: "选择老师条件" }],
       selectIndex: 0,
-      show: true,
+      show: false,
       isShow: false,
       minDate: new Date(2010, 0, 1),
       maxDate: new Date(2010, 0, 12),

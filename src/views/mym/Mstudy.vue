@@ -1,7 +1,7 @@
 <template>
     <div class="study">
         <div class="head">
-            <img src="../../assets/mym_img/fan.jpg" alt="">
+            <img src="../../assets/mym_img/fan.jpg" alt="" @click="goBack">
             <p>我的学习</p>
             <img src="../../assets/mym_img/fan.jpg" alt="">
         </div>
@@ -23,6 +23,11 @@ export default {
     data() {
         return{
             active:"1"
+        }
+    },
+    methods:{
+        goBack(){
+            window.history.go(-1)
         }
     }
 }
