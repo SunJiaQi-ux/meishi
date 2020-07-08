@@ -192,33 +192,99 @@ const routes = [
     },
   },
   {
-    path: '/teacher',
-    name: 'Teacher',
-    component: () => import('../views/jijie/Techer.vue')
+    path: '/gzls',
+    name: 'gzls',
+    component: () => import('../views/lfy/gzls.vue')
   },
   {
-    // <<<<<<< HEAD
-    path: '/yueke',
-    name: 'Yueke',
-    component: () => import('../views/hang/Yueke.vue'),
-    meta: {
-      footer: true
-    }
+    path: '/wdsc',
+    name: 'wdsc',
+    component: () => import('../views/lfy/wdsc.vue')
   },
   {
-    path: '/exe',
-    name: 'exe',
-    component: () => import('../views/hang/Exe.vue'),
-    meta: {
-      footer: true
-    },
+    path: '/kcdd',
+    name: 'kcdd',
+    component: () => import('../views/lfy/kcdd.vue')
   },
   {
-    path: '/yuyue',
-    name: 'yuyue',
-    component: () => import('../views/jijie/Yuyue.vue')
-    // >>>>>>> 238704d4528f0fc7b39ec7fb50e8b4342fda5b20
-    // >>>>>>> a9e438a3842fe06e9c8a3a8e3735b5920bc6ab49
+    path: '/hydd',
+    name: 'hydd',
+    component: () => import('../views/lfy/hydd.vue')
+  },
+  {
+    path: '/ykdd',
+    name: 'ykdd',
+    component: () => import('../views/lfy/ykdd.vue')
+  },
+  {
+    path: '/yhq',
+    name: 'yhq',
+    component: () => import('../views/lfy/yhq.vue')
+  },
+  {
+    path: '/xxk',
+    name: 'xxk',
+    component: () => import('../views/lfy/xxk.vue')
+  },
+  {
+    path: '/xxkdh',
+    name: 'xxkdh',
+    component: () => import('../views/lfy/xxkdh.vue')
+  },
+  {
+    path: '/hy',
+    name: 'hy',
+    component: () => import('../views/lfy/hy.vue')
+  },
+  {
+    path: '/wdxx',
+    name: 'wdxx',
+    component: () => import('../views/lfy/wdxx.vue')
+  },
+  {
+    path: '/kctz',
+    name: 'kctz',
+    component: () => import('../views/lfy/kctz.vue')
+  },
+  {
+    path: '/xttz',
+    name: 'xttz',
+    component: () => import('../views/lfy/xttz.vue')
+  },
+  {
+    path: '/ddtz',
+    name: 'ddtz',
+    component: () => import('../views/lfy/ddtz.vue')
+  },
+  {
+    path: '/yktz',
+    name: 'yktz',
+    component: () => import('../views/lfy/yktz.vue')
+  },
+  {
+    path: '/kstz',
+    name: 'kstz',
+    component: () => import('../views/lfy/kstz.vue')
+  },
+  {
+    path: '/yjfk',
+    name: 'yjfk',
+    component: () => import('../views/lfy/yjfk.vue')
+  },
+  {
+    path: '/zxkf',
+    name: 'zxkf',
+    component: () => import('../views/lfy/zxkf.vue')
+  },
+  {
+    path: '/sz',
+    name: 'sz',
+    component: () => import('../views/lfy/sz.vue')
+  },
+  {
+    path: '/mima',
+    name: 'mima',
+    component: () => import('../views/lfy/mima.vue')
   }
 ]
 

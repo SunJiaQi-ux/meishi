@@ -26,6 +26,7 @@
 <script>
 import "../../assets/rem";
 export default {
+  name:"exe",
   data() {
     return {
       list: []

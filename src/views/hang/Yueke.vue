@@ -28,6 +28,7 @@
 <script>
 import "../../assets/rem";
 export default {
+  name:"Yueke",
   data() {
     return {
       li: [],
