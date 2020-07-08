@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import "../../assets/rem";
 export default {
   data() {
     return {
@@ -68,6 +69,9 @@ export default {
 </script>
 
 <style  lang="scss" scoped>
+div{
+  font-size: 0.3rem !important;
+}
 .sel {
   color: #eb6100;
   border-bottom: 1px solid #eb6100;
@@ -77,13 +81,13 @@ div {
 }
 header {
   width: 100%;
-  height: 3rem;
-  font-size: 1.3rem;
+  height: 0.96rem;
+  font-size: 0.3rem;
   text-align: center;
-  line-height: 3rem;
+  line-height: 0.96rem;
 }
 nav {
-  margin-top: 1.3rem;
+  margin-top: 0.416rem;
   width: 100%;
   ul {
     width: 100%;
@@ -109,18 +113,18 @@ section {
     align-items: center;
     span {
       color: #bccbe5;
-      font-size: 0.9rem;
+      font-size: 0.3rem;
     }
     button {
       background: #eb6100;
       border: none;
       color: white;
-      width: 6.2rem;
-      height: 1.6rem;
+      width: 1.98rem;
+      height: 0.512rem;
     }
     img {
-      width: 14.375rem;
-      margin-top: 3rem;
+      width: 4.6rem;
+      margin-top: 0.96rem;
     }
   }
 }

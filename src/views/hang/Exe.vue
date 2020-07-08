@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import "../../assets/rem";
 export default {
   data() {
     return {
@@ -36,57 +37,58 @@ export default {
     });
   },
   methods: {
-    add(item,index){
-      if(index==0){
+    add(item, index) {
+      if (index == 0) {
         this.$router.push({
-          name:'kao1',
-          query:{item:item.name}
-        })
-      }else if(index == 1){
+          name: "kao1",
+          query: { item: item.name }
+        });
+      } else if (index == 1) {
         this.$router.push({
-          name:'kao2',
-          query:{item:item.name}
-        })
-      }else if(index == 2){
+          name: "kao2",
+          query: { item: item.name }
+        });
+      } else if (index == 2) {
         this.$router.push({
-          name:'kao3',
-          query:{item:item.name}
-        })
-      }else if(index == 3){
+          name: "kao3",
+          query: { item: item.name }
+        });
+      } else if (index == 3) {
         this.$router.push({
-          name:'kao4',
-          query:{item:item.name}
-        })
-      }else if(index == 4){
+          name: "kao4",
+          query: { item: item.name }
+        });
+      } else if (index == 4) {
         this.$router.push({
-          name:'kao5',
-          query:{item:item.name}
-        })
-      }else if(index == 5){
+          name: "kao5",
+          query: { item: item.name }
+        });
+      } else if (index == 5) {
         this.$router.push({
-          name:'kao6',
-          query:{item:item.name}
-        })
+          name: "kao6",
+          query: { item: item.name }
+        });
       }
     }
-  },
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 div {
-  font-weight: 200;
+  font-weight: 100 !important;
+  font-size: 0.3rem !important;
 }
 p {
   width: 100%;
-  height: 2.81rem;
+  height: 0.89rem;
   text-align: center;
-  line-height: 2.81rem;
-  font-size: 1.2rem;
+  line-height: 0.89rem;
+  font-size: 0.3rem;
 }
 section {
   width: 100%;
-  height: 12.5rem;
+  height: 4rem;
   background: #f0f2f5;
   position: relative;
   ul {
@@ -99,8 +101,8 @@ section {
     top: 15px;
     left: 10px;
     li {
-      width: 4.3rem;
-      font-size: 0.8rem;
+      width: 1.3rem;
+      font-size: 0.27rem;
       margin: 0 10px;
       display: flex;
       flex-wrap: wrap;
@@ -111,7 +113,7 @@ section {
 footer {
   width: 100%;
   .ospan {
-    font-size: 1.2rem;
+    font-size: 0.4rem;
     color: gray;
     margin-left: 2%;
   }
@@ -120,15 +122,15 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-left: 2%;
-    margin-top: 1.1rem;
+    margin-top: 0.352rem;
   }
   img {
-    width: 8rem;
+    width: 2.56rem;
   }
   .img {
-    margin-top: 4rem;
+    margin-top: 1.28rem;
     width: 98%;
-    height: 13.125rem;
+    height: 4.2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -136,7 +138,7 @@ footer {
     align-content: space-between;
     span {
       color: gray;
-      font-size: 0.9rem;
+      font-size: 0.3rem;
     }
   }
 }
