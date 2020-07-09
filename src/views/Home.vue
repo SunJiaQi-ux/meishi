@@ -197,7 +197,10 @@ export default {
   width: 100%;
   font-size: 14px;
   color: #b7b7b7;
-  
+
+overflow:hidden; //超出的文本隐藏
+text-overflow:ellipsis; //溢出用省略号显示
+white-space:nowrap; //溢出不换行
 }
 h5{
   font-size: 1rem;
