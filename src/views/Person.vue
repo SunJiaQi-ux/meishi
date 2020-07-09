@@ -337,7 +337,7 @@ footer>div{
 .foot-div div p{
     margin: 0.08rem;
     color: #626262;
-    font-size: 0.14rem;
+    font-size: 0.26rem;
 }
 h4{
     font-size: 0.3rem;
