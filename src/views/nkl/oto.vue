@@ -15,38 +15,9 @@
       <div class="nkl_cont">
         <!-- 分类 -->
         <div>
-          <van-dropdown-menu active-color="#EE8032" :overlay="false" v-model="value" @click.native="onConfirm(value)">
-              <van-dropdown-item  v-model="value1" title="选择上课时间">
-                  <!-- 日历 -->
-                  <div class="tutorship_body_date">
-                      <div><van-calendar
-                          title="日历"
-                          :poppable="false"
-                          :show-confirm="false"
-                          :style="{ height: '5rem' }"
-                          :max-date="maxDate"
-                          :min-date="minDate"
-                      />
-                      </div>
-                  </div> 
-
-              </van-dropdown-item>
-              <van-dropdown-item  v-model="value2" title="选择老师条件">
-                  <!-- 老师选择 -->
-                  <div class="tutorship_body_teacher">
-                      <div class="tuorship_body_teacher_content" v-for="(item,index) in bodyItem" :key="index">
-                          <div class="tuorship_body_teacher_content_header">
-                          <p>{{item.tite}}</p>
-                          </div>
-                          <div class="tuorship_body_teacher_item">
-                          <div class="tuorship_tacher_form" v-for="(item,index) in item.option" :key="index">
-                              <p>{{item.form}}</p>
-                          </div>
-                          </div>
-                      </div>
-                  </div>
-                
-              </van-dropdown-item>
+          <van-dropdown-menu active-color="#EE8032" :overlay="false" v-model="value">
+              <van-dropdown-item  v-model="value1" title="选择上课时间" @open="s()" @close="s1()"/>
+            <van-dropdown-item v-model="value2" open title="选择老师条件" @open="k()" @close="k1()"/>  
           </van-dropdown-menu>
         </div>
         <!-- 列表 -->
@@ -58,17 +29,11 @@
             </div>
             <div class="nkl_jia"><p>么有更多了</p></div>
         </div>
-      
-      
-        <!-- 设置 -->
-        <div class="torship_bottom" v-show="isShow3">
-            <div class="torship_left">
-                <p>重置</p>
-            </div>
-            <div class="torship_right">
-                <p>确定</p>
-            </div>
-        </div>
+
+        <!-- 老师 -->
+        <Laoshi v-show="isShow3"></Laoshi>
+        <Shangke v-show="isShow2"></Shangke>
+       
 
       </div>
   </div>
@@ -76,6 +41,8 @@
 
 <script>
 import '../../assets/rem'
+import Laoshi from '../nkl/laoshi'
+import Shangke from '../nkl/shangke'
 export default {
   name: "",
   data() {
@@ -85,15 +52,15 @@ export default {
         value2:"选择老师条件",
         otolist:[],
         isShow:true,
+        isShow2:false,
         isShow3:false,
-        // 孙佳琪
-        minDate: new Date(2010, 0, 1),
-        maxDate: new Date(2010, 0, 12),
-        bodyItem: []
     };
   },
   props: {},
-  components: {},
+  components: {
+      Laoshi,
+      Shangke
+  },
   mounted() {
    this.otoList()
   },
@@ -104,15 +71,24 @@ export default {
             console.log(res.data.data)
             this.otolist=res.data.data
         })
-        this.$axios.get("http://localhost:8080/teacher.json").then(response => {
-            this.bodyItem = response.data;
-        });
       },
-      onConfirm(){
-         this.isShow=!this.isShow
-         this.isShow3=!this.isShow3
+      k(){
+        console.log(1111)
+        this.isShow=!this.isShow
+        this.isShow3=!this.isShow3
+      },
+      k1(){
+        this.isShow=!this.isShow
+        this.isShow3=!this.isShow3
+      },
+      s(){
+        this.isShow=!this.isShow
+        this.isShow2=!this.isShow2
+      },
+      s1(){
+        this.isShow=!this.isShow
+        this.isShow2=!this.isShow2
       }
-
   }
 };
 </script>
@@ -192,83 +168,7 @@ html,body{
         }
     } 
 }
-/**孙佳琪**/
-// 日历
-.tutorship_body_date {
-  width: 7.4rem;
-  min-height:6rem;
-  background: #f0f2f5;
-  div{
-    width: 7.04rem;
-    margin: 0 auto;
-  }
-}
-// 老师选择
-.tutorship_body_teacher {
-  width: 95%;
-  padding: 0 2.5%;
-//   box-sizing: border-box;
-  background-color: #ffff;
-}
-.tuorship_body_teacher_content_header {
-  width: 100%;
-  height: 0.26rem;
-  p{
-    padding-top: 0.34rem;
-    font-size: 0.26rem;
-    color:#474748;
-  }
-}
-.tuorship_body_teacher_item {
-  width: 100%;
-  display: inline-flex;
-//   justify-content: space-between;
-  flex-wrap: wrap;
-}
-.tuorship_tacher_form {
-  width: 1.36rem;
-  height: 0.66rem;
-  margin-right:0.44rem;
-  margin-top: 0.14rem;
-  background-color: #f5f5f5;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  color: #646464;
-  font-size: 0.24rem;
-  border-radius: 0.06rem;
-}
-.tuorship_tacher_form:nth-of-type(4n){
-    margin-right: 0;
-}
 
-// 底部
-.torship_bottom {
-  width: 100%;
-  height: 0.87rem;
-  position: fixed;
-  bottom: 0;
-  display: inline-flex;
-  justify-content: space-between;
-}
-.torship_left {
-  width: 50%;
-  height: 0.87rem;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  color: #eb6100;
-  background-color: #fff;
-  font-size: 0.32rem;
-}
-.torship_right {
-  width: 50%;
-  height: 0.87rem;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eb6100;
-  color: #fff;
-  font-size: 0.32rem;
-}
+
+
 </style>
