@@ -1,6 +1,7 @@
 <template>
   <div class="main">
     <div ref="move_div" @touchstart="down" @touchmove="move" @touchend="end" :style="{top: top  + 'px', left: left  + 'px'}" class="drag_area">
+        <img src="../../../public/image/xiao.png" alt="">
     </div>
   </div>
 </template>
@@ -76,17 +77,22 @@ export default {
 <style lang="scss">
 .main{
     height: -webkit-fill-available;
-    background:#000;
     .drag_area{
       width: 1rem;
       height: 1rem;
-      background: url(https://static.meiqia.com/widget/static/icon-mq-round@2x.png);
       background-color: rgb(0, 122, 255);
       border-radius: 50%;
       position: absolute;
-      top: 0;
-      right: 0;
-      padding-top: 0.02rem;
+      top: 5rem;
+      right: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+          width: 0.46rem;
+          height: 0.32rem;
+      }
+          
     }
 }
 </style>
