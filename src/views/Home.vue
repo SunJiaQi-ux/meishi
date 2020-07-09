@@ -49,7 +49,6 @@
 
 <script>
 import axios from "axios";
-// import "../assets/rem.js";
 
 export default {
   components: {},
@@ -88,53 +87,52 @@ export default {
 
 
 <style lang="scss" scoped>
-* {
-  font-size: 16px;
-}
+
 .home {
   background-color: #f0f2f5;
 }
 .home_header {
   width: 100%;
-  height: 12.5rem;
+  height: 4rem;
 }
 .my-swipe {
   width: 100%;
-  height: 12.5rem;
+  height: 4rem;
 }
 .van-swipe-item img {
   width: 100%;
+  height: 4rem;
 }
 .home_body {
   width: 100%;
-  height: 31.25rem;
+  height: 21.6rem;
 }
 .home_body_header {
   width: 95%;
-  height: 6.4375rem;
+  height: 2.06rem;
   padding: 0 2.5%;
   position: relative;
-  bottom: 20px;
+  bottom: 0.5rem;
   display: inline-flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 .home_body_header_item {
   width: 29%;
-  height: 6.4375rem;
+  height: 2.06rem;
   background: #fff;
   border-radius: 15px;
 }
 .home_body_header_div {
   width: 100%;
-  height: 3.125rem;
+  height: 0.4rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 .home_body_header_img {
   width: 20%;
-  height: 21px;
+  height: 0.42rem;
 }
 .home_body_header_img img {
   width: 100%;
@@ -144,7 +142,11 @@ export default {
   display: inline-flex;
   justify-content: center;
   color: #8c8c8c;
-  font-size: 13px;
+  font-size: 0.26rem;
+}
+.home_body_header_sone p{
+  position: relative;
+  bottom: 0.4rem;
 }
 .body_contet {
   width: 95%;
@@ -155,17 +157,18 @@ export default {
 }
 .teacherItem {
   width: 100%;
-  height: 20px;
-  border-left: 2px solid orangered;
+  height: 0.4rem;
+  border-left: 0.04rem solid orangered;
 }
 .teacherItem p {
-  padding-left: 20px;
+  padding-left: 0.4rem;
+  font-size: 0.3rem;
 }
 .teacherItem_list {
   width: 91%;
-  height: 5.0625rem;
+  height: 1.64rem;
   padding: 0 4.5%;
-  margin-bottom: 10px;
+  margin-bottom: 0.2rem;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -173,8 +176,8 @@ export default {
 }
 .teacherItem_image {
   width: 13%;
-  height: 2.5rem;
-  border-radius: 20px;
+  height: 0.87rem;
+  border-radius: 0.4rem;
   overflow: hidden;
 }
 .teacherItem_image img {
@@ -183,16 +186,19 @@ export default {
 }
 .teacherItem_title {
   width: 77%;
-  height: 2.5rem;
+  height: 0.8rem;
   padding-left: 10%;
   overflow: hidden;
 }
 .teacherItem_name {
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 .teacherItem_introduce {
   width: 100%;
-  font-size: 0.875rem;
+  font-size: 14px;
   color: #b7b7b7;
+}
+h5{
+  font-size: 1rem;
 }
 </style>
