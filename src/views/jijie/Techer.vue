@@ -2,7 +2,7 @@
   <div>
     <div class="title">
         <div @click="back"><van-icon name="arrow-left"/></div>
-        <div>讲师详情</div>
+        <div >讲师详情</div>
         <div></div>
     </div>
 

@@ -11,7 +11,7 @@
                         <img class="av-img2" src="../assets/mym_img/huangguan.jpg" alt="">
                     </div>
                     <div class="foot-two1">
-                        <p class="one-p">去约课</p>
+                        <p class="one-p" @click="goOto">去约课</p>
                     </div>
                 </div>
                 <div class="one-two">
@@ -20,7 +20,7 @@
                         <p>我的特色课</p>
                         <h5 class="two-h5">-已购课程学习-</h5>
                     </div>
-                    <div class="foot-one">
+                    <div class="foot-one" @click="goYueke">
                         <h3 class="two-h3">5</h3>
                         <p>一对一辅导</p>
                         <h5 class="two-h5">-一对一老师预约-</h5>
@@ -121,6 +121,17 @@ export default {
         }
     },
     methods:{
+        goOto(){
+            this.$router.push({
+                path:"/oto"
+            })
+        },
+        goYueke(){
+            this.$router.push({
+                path:"/yueke"
+            })
+               
+        },
         goMp(){
             this.$router.push({
                 path:"/mp"
@@ -262,10 +273,10 @@ header{
     font-size: 0.16rem;
 }
 .one-two .foot-one p{
-    font-size: 0.16rem;
+    font-size: 0.26rem;
 }
 .one-two .foot-one h5{
-    font-size: 0.16rem;
+    font-size: 0.24rem;
 
 }
 .two-h3{
@@ -309,14 +320,15 @@ footer{
 footer>div{
     width: 100%;
     height: 2.2rem;
-    border-bottom: 1px solid gray;
+    
 }
 .foot-div{
     display: flex;
+    border-bottom: 0.01rem solid #eee;
 }
 .foot-div div{
     width: 1.8rem;
-    height: 2rem;
+    height: 1.6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -325,9 +337,11 @@ footer>div{
 .foot-div div p{
     margin: 0.08rem;
     color: #626262;
-    font-size: 0.14rem;
+    font-size: 0.26rem;
 }
 h4{
     font-size: 0.3rem;
+    margin-block-start: 0em;
+    margin-block-end: 0rem;
 }
 </style>
