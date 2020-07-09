@@ -39,6 +39,14 @@ const routes = [
     }
   },
   {
+    path: '/xiao',
+    name: 'xiao',
+    component: () => import('../views/nkl/xiao.vue'),
+    meta: {
+      footer: false
+    }
+  },
+  {
     path: '/study',
     name: 'Study',
     component: () => import('../views/Study.vue'),
@@ -136,7 +144,6 @@ const routes = [
     }
   },
   {
-    // <<<<<<< HEAD
     path: '/kao2',
     name: 'kao2',
     component: () => import('../views/hang/Kao2.vue'),

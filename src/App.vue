@@ -14,15 +14,21 @@
       <van-tabbar-item replace icon="setting-o" to="/person">我的</van-tabbar-item>
     </van-tabbar>
     <router-view />
+    <Xiao></Xiao>
   </div>
+
 </template>
 
 <script>
+import Xiao from './views/nkl/xiao'
 export default {
   data() {
     return {
       active: 0
     };
+  },
+  components:{
+    Xiao
   }
 };
 </script>

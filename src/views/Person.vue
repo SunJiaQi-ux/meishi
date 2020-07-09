@@ -273,10 +273,10 @@ header{
     font-size: 0.16rem;
 }
 .one-two .foot-one p{
-    font-size: 0.16rem;
+    font-size: 0.26rem;
 }
 .one-two .foot-one h5{
-    font-size: 0.16rem;
+    font-size: 0.24rem;
 
 }
 .two-h3{
@@ -320,14 +320,15 @@ footer{
 footer>div{
     width: 100%;
     height: 2.2rem;
-    border-bottom: 1px solid gray;
+    
 }
 .foot-div{
     display: flex;
+    border-bottom: 0.01rem solid #eee;
 }
 .foot-div div{
     width: 1.8rem;
-    height: 2rem;
+    height: 1.6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -336,9 +337,11 @@ footer>div{
 .foot-div div p{
     margin: 0.08rem;
     color: #626262;
-    font-size: 0.14rem;
+    font-size: 0.26rem;
 }
 h4{
     font-size: 0.3rem;
+    margin-block-start: 0em;
+    margin-block-end: 0rem;
 }
 </style>
