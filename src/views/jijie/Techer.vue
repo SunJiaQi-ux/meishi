@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="title">
-        <div><van-icon name="arrow-left" /></div>
+        <div @click="back"><van-icon name="arrow-left"/></div>
         <div>讲师详情</div>
         <div></div>
     </div>
@@ -124,6 +124,9 @@ export default {
   methods: {
    jump(){
        this.$router.push('/yuyue')
+   },
+   back(){
+       this.$router.go(-1)
    }
   }
 };
