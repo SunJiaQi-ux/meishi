@@ -273,10 +273,10 @@ header{
     font-size: 0.16rem;
 }
 .one-two .foot-one p{
-    font-size: 0.16rem;
+    font-size: 0.26rem;
 }
 .one-two .foot-one h5{
-    font-size: 0.16rem;
+    font-size: 0.24rem;
 
 }
 .two-h3{
