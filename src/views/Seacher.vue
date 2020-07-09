@@ -17,16 +17,19 @@ export default {};
 </script>
 
 <style scoped>
+body{
+  font-size: 0.16rem;
+}
 .seacher_body {
   width: 94%;
-  padding: 0 3% 3%;
+  height: 0.8rem;
+  margin: 0 auto;
 }
 .seacher_body_header {
   width: 100%;
   height: 0.8rem;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
   font-weight: 700;
   font-size: 0.3rem;
 }
