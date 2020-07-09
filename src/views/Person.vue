@@ -320,14 +320,15 @@ footer{
 footer>div{
     width: 100%;
     height: 2.2rem;
-    border-bottom: 1px solid gray;
+    
 }
 .foot-div{
     display: flex;
+    border-bottom: 0.01rem solid #eee;
 }
 .foot-div div{
     width: 1.8rem;
-    height: 2rem;
+    height: 1.6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -340,5 +341,7 @@ footer>div{
 }
 h4{
     font-size: 0.3rem;
+    margin-block-start: 0em;
+    margin-block-end: 0rem;
 }
 </style>
