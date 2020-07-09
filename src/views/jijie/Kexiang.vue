@@ -15,7 +15,7 @@
         </ul>
     </div>
 
-    <div class="sec">
+    <div class="sec" @click="jump1">
         <p>教学团队</p>
         <figure>
             <img src="https://baijiayun-wangxiao.oss-cn-beijing.aliyuncs.com/uploads/avatar.jpg" alt="">
@@ -123,6 +123,9 @@ export default {
   methods: {
       jump(){
           this.$router.push('/lixue')
+      },
+      jump1(){
+           this.$router.push('/teacher')
       },
       back(){
           this.$router.go(-1)

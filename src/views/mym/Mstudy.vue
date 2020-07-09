@@ -3,7 +3,7 @@
         <div class="head">
             <img src="../../assets/mym_img/fan.jpg" alt="" @click="goBack">
             <p>我的学习</p>
-            <img src="../../assets/mym_img/fan.jpg" alt="">
+            <van-icon @click="jump" name="newspaper-o" size="0.46rem"/>
         </div>
         <van-tabs v-model="active">
         <van-tab title="直播课(0)">
@@ -36,6 +36,9 @@ export default {
             this.$router.push({
                 path:"/course"
             })
+        },
+        jump(){
+            this.$router.push('/study')
         }
     }
 }
