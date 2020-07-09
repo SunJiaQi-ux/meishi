@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div class="right">
-                    <div>查看详情</div>
+                    <div @click="jump">查看详情</div>
                 </div>
             </div>
         </div>
@@ -94,6 +94,9 @@ export default {
   methods: {
       back(){
           this.$router.go(-1)
+      },
+      jump(){
+          this.$router.push('/teacher')
       }
   }
 };
