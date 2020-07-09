@@ -11,6 +11,9 @@ Vue.prototype.$axios=axios
 import Vant from 'vant'
 import 'vant/lib/index.css'
 
+//使用rem
+import './assets/rem'
+
 import { Tab, Tabs,Icon,Field } from 'vant';
 Vue.use(Field);
 Vue.use(Icon);
