@@ -50,7 +50,7 @@
           </van-dropdown-menu>
         </div>
         <!-- 列表 -->
-        <div class="nkl_list" v-show="isShow">
+        <div class="nkl_list" v-show="isShow" @click="jump()">
             <div class="nkl-list" v-for="(item,index) in otolist" :key="index">
               <img :src="item.avatar" alt="">
               <div><p>{{item.real_name}}</p><p>{{item.sex==0?'男':'女'}} {{item.teach_age}}年教龄</p></div>
@@ -111,6 +111,9 @@ export default {
       onConfirm(){
          this.isShow=!this.isShow
          this.isShow3=!this.isShow3
+      },
+      jump(){
+        this.$router.push('/yuyue')
       }
 
   }

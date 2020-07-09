@@ -197,6 +197,7 @@ export default {
   width: 100%;
   font-size: 14px;
   color: #b7b7b7;
+  
 }
 h5{
   font-size: 1rem;
