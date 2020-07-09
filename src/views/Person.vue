@@ -11,7 +11,7 @@
                         <img class="av-img2" src="../assets/mym_img/huangguan.jpg" alt="">
                     </div>
                     <div class="foot-two1">
-                        <p class="one-p">去约课</p>
+                        <p class="one-p" @click="goOto">去约课</p>
                     </div>
                 </div>
                 <div class="one-two">
@@ -20,7 +20,7 @@
                         <p>我的特色课</p>
                         <h5 class="two-h5">-已购课程学习-</h5>
                     </div>
-                    <div class="foot-one">
+                    <div class="foot-one" @click="goYueke">
                         <h3 class="two-h3">5</h3>
                         <p>一对一辅导</p>
                         <h5 class="two-h5">-一对一老师预约-</h5>
@@ -121,6 +121,17 @@ export default {
         }
     },
     methods:{
+        goOto(){
+            this.$router.push({
+                path:"/oto"
+            })
+        },
+        goYueke(){
+            this.$router.push({
+                path:"/yueke"
+            })
+               
+        },
         goMp(){
             this.$router.push({
                 path:"/mp"
