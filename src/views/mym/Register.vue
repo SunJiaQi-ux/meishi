@@ -18,9 +18,7 @@
             <div class="contain-three">
                 <button class="login-btn">登录</button>
             </div>
-            
         </div>
-
         <div class="register-foot">
         </div>
     </div>

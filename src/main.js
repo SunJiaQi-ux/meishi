@@ -10,7 +10,11 @@ Vue.prototype.$axios=axios
 //使用vant
 import Vant from 'vant'
 import 'vant/lib/index.css'
+//使用element
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
+Vue.use(ElementUI)
 //使用rem
 import './assets/rem'
 
