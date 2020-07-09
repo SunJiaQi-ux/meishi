@@ -33,14 +33,13 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 * {
   padding: 0;
   margin: 0;
 }
 html,body,#app{
   width: 100%;
-  height: 100%;
 }
 /* vant组件里面 */
 /* /oto */
