@@ -136,7 +136,6 @@ const routes = [
     }
   },
   {
-    // <<<<<<< HEAD
     path: '/kao2',
     name: 'kao2',
     component: () => import('../views/hang/Kao2.vue'),
