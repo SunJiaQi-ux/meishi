@@ -105,7 +105,8 @@ export default {
 }
 .home_body {
   width: 100%;
-  height: 21.6rem;
+  // height: 21.6rem;
+  padding-bottom: 1rem;
 }
 .home_body_header {
   width: 95%;
