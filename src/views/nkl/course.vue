@@ -13,23 +13,23 @@
               <div class="nkl_option1">
                 <div>
                   <p>年级</p>
-                  <div><span v-for="(item,index) in option1.nianji" :key="index">{{ item }}</span></div>
+                  <div><span @click="a(index)" :id="nindex==index ? 'active':''" v-for="(item,index) in option1.nianji" :key="index">{{ item }}</span></div>
                 </div>
                 <div>
                   <p>课程</p>
-                  <div><span v-for="(item,index) in option1.xueke" :key="index">{{ item }}</span></div>
+                  <div><span @click="b(index)" :id="xindex==index ? 'active':''" v-for="(item,index) in option1.xueke" :key="index">{{ item }}</span></div>
                 </div>
                 <div><button>重置</button><button>确定</button></div>
               </div>
             </van-dropdown-item>
             <van-dropdown-item title="排序">
               <div class="nkl_option2">
-                <p v-for="(item,index) in option2" :key="index">{{item}}</p>
+                <p @click="c(index)" :id="pindex==index ? 'pactive':''" v-for="(item,index) in option2" :key="index">{{item}}</p>
               </div>
             </van-dropdown-item> 
             <van-dropdown-item title="筛选">
               <div class="nkl_option3">
-                <span v-for="(item,index) in option3" :key="index">{{item}}</span>
+                <span @click="s(index)" :id="sindex==index ? 'active':''" v-for="(item,index) in option3" :key="index">{{item}}</span>
               </div>
             </van-dropdown-item>
         </van-dropdown-menu>
@@ -62,6 +62,10 @@ export default {
         page:1,
         list:[],
         loading:false,
+        nindex:-1,
+        xindex:-1,
+        pindex:-1,
+        sindex:-1,
     };
   },
   props: {},
@@ -82,6 +86,19 @@ export default {
       this.$router.push({
         path:'/kexiang'
       })
+    },
+    a(index){
+      this.nindex=index
+      console.log(this.nindex)
+    },
+    b(index){
+      this.xindex=index
+    },
+    c(index){
+      this.pindex=index
+    },
+    s(index){
+      this.sindex=index
     }
   }
 };
@@ -243,5 +260,12 @@ export default {
   z-index: 200;
   width: 50px;
   height: 50px;
+}
+#active{
+  background: #EBEEFE;
+  color:#EB6100;
+}
+#pactive{
+  color:#EB6100;
 }
 </style>
