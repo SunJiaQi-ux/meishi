@@ -9,7 +9,7 @@
         您好，很抱歉我们暂时无法为您提供服务，如需帮助，请留言，我们将尽快联系并解决您的问
     </p>
     手机<br/>
-    <van-field v-model="tel" type="tel" border="true" placeholder="请输入手机号"/>
+    <van-field v-model="tel" type="tel" :border="true" placeholder="请输入手机号"/>
     留言内容<br/>
     <van-field
   v-model="message"
@@ -38,7 +38,8 @@ components: {},
 data() {
 //这里存放数据
 return {
-del:''
+tel:'',
+message:""
 };
 },
 //监听属性 类似于data概念

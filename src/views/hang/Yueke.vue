@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <p>约课记录</p>
+      <p style="font-weight:520">约课记录</p>
     </header>
     <nav>
       <ul>
@@ -16,9 +16,7 @@
     <section>
       <div>
         <img src="http://localhost:8080/image/01.png" alt />
-        <span v-if="isShow">还没有待上课记录哦</span>
-        <span v-if="is">还没有上课记录哦</span>
-        <span v-if="show">还没有取消上课记录哦</span>
+        <span ref="span">还没有待上课记录哦</span>
         <button @click="router">立即约课</button>
       </div>
     </section>
@@ -28,14 +26,11 @@
 <script>
 import "../../assets/rem";
 export default {
-  name:"Yueke",
+  name: "Yueke",
   data() {
     return {
       li: [],
-      selone: 0,
-      isShow: true,
-      is: false,
-      show: false
+      selone: 0
     };
   },
   mounted() {
@@ -47,17 +42,11 @@ export default {
     cut(index) {
       this.selone = index;
       if (index == 1) {
-        this.isShow = false;
-        this.is = true;
-        this.show = false;
+        this.$refs.span.innerHTML = "还没有上课记录哦";
       } else if (index == 0) {
-        this.isShow = true;
-        this.is = false;
-        this.show = false;
+        this.$refs.span.innerHTML = "还没有待上课记录哦";
       } else if (index == 2) {
-        this.isShow = false;
-        this.is = false;
-        this.show = true;
+        this.$refs.span.innerHTML = "还没有取消上课记录哦";
       }
     },
     router() {
@@ -70,7 +59,7 @@ export default {
 </script>
 
 <style  lang="scss" scoped>
-div{
+div {
   font-size: 0.3rem !important;
 }
 .sel {

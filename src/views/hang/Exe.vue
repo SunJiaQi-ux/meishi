@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>练习</p>
+    <p style="font-weight:500">练习</p>
     <section>
       <ul>
         <li v-for="(item,index) in list" :key="index" @click="add(item,index)">
@@ -17,7 +17,7 @@
       </div>
       <div class="img">
         <img src="http://localhost:8080/image/08.png" alt />
-        <span>暂无模考安排,敬请期待</span>
+        <span ref="span">暂无模考安排,敬请期待</span>
       </div>
     </footer>
   </div>
@@ -26,7 +26,7 @@
 <script>
 import "../../assets/rem";
 export default {
-  name:"exe",
+  name: "exe",
   data() {
     return {
       list: []
@@ -36,6 +36,7 @@ export default {
     this.$axios.get("/api/exe.json").then(res => {
       this.list = res.data.exe;
     });
+    // console.log(this.$refs.span.innerHTML);
   },
   methods: {
     add(item, index) {
@@ -44,6 +45,7 @@ export default {
           name: "kao1",
           query: { item: item.name }
         });
+        // this.$refs.span.innerHTML = 'Hello World'
       } else if (index == 1) {
         this.$router.push({
           name: "kao2",
@@ -77,19 +79,19 @@ export default {
 
 <style lang="scss" scoped>
 div {
-  font-weight: 100 !important;
-  font-size: 0.3rem !important;
+  font-weight: 100;
+  font-size: 0.29rem !important;
 }
 p {
   width: 100%;
-  height: 0.89rem;
+  height: 0.95rem;
   text-align: center;
   line-height: 0.89rem;
   font-size: 0.3rem;
 }
 section {
   width: 100%;
-  height: 4rem;
+  height: 3.6rem;
   background: #f0f2f5;
   position: relative;
   ul {
@@ -104,10 +106,13 @@ section {
     li {
       width: 1.3rem;
       font-size: 0.27rem;
-      margin: 0 10px;
+      margin: 0 11px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      img {
+        width: 1.1rem;
+      }
     }
   }
 }
