@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import "../../assets/rem";
 export default {
   data() {
     return {
@@ -58,6 +59,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+div{
+  font-size: 0.3rem;
+}
 .sel {
   color: red;
 }
@@ -78,11 +82,11 @@ hr {
 section {
   width: 100%;
   display: flex;
-  margin-top: 2rem;
+  margin-top: 0.64rem;
   justify-content: space-between;
   .left {
     width: 30%;
-    height: 30rem;
+    height: 9.6rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

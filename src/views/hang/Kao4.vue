@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import "../../assets/rem";
 export default {
   data() {
     return {
@@ -47,6 +48,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+div{
+  font-size: 0.3rem;
+}
 header {
   width: 100%;
   height: 45px;
@@ -55,7 +59,7 @@ header {
   line-height: 45px;
   justify-content: space-between;
   .icon {
-    font-size: 1.2rem;
+    font-size: 0.38rem;
   }
 }
 img {

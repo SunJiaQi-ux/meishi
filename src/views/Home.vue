@@ -32,7 +32,7 @@
           <div class="teacherItem">
             <p>{{item.content_tiitle}}</p>
           </div>
-          <div class="teacherItem_list" v-for="(item,index) in item.content_item" :key="index">
+          <div class="teacherItem_list" v-for="(item,index) in item.content_item" :key="index" @click="jump()">
             <div class="teacherItem_image">
               <img :src="item.head_portrait" />
             </div>
@@ -70,6 +70,9 @@ export default {
       if (index === 2) {
         this.$router.push("/study");
       }
+    },
+    jump(){
+      this.$router.push('/teacher')
     }
   },
   mounted() {
