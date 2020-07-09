@@ -6,7 +6,7 @@
         </div>
 
         <div class="login-contain">
-            <div class="contain-one">
+            <!-- <div class="contain-one">
                 <input class="in-phone " type="text" placeholder="请输入手机号" v-model="loginUser.phone">
                 <input class="in-pass" type="text" placeholder="请输入密码" v-model="loginUser.password">
             </div>
@@ -16,7 +16,7 @@
             </div>
             <div class="contain-three">
                 <button class="login-btn" @click="login">登录</button>
-            </div>
+            </div> -->
             
         </div>
 
