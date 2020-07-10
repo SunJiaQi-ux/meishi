@@ -270,7 +270,7 @@ header{
     text-align: center;
 }
 .one-two .foot-one h3{
-    font-size: 0.16rem;
+    font-size: 0.26rem;
 }
 .one-two .foot-one p{
     font-size: 0.26rem;
