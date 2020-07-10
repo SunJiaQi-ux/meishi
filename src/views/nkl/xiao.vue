@@ -88,6 +88,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 1000;
       img{
           width: 0.46rem;
           height: 0.32rem;

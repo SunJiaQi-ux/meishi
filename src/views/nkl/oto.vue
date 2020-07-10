@@ -104,6 +104,7 @@ html,body{
     position: fixed;
     width: 7.4rem;
     height: 0.89rem;
+    z-index: 999;
 }
 //中间
 .nkl_cont{
